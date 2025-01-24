@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>插件目录</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f5f5f5;
+        }
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        .description {
+            max-width: 400px;
+            white-space: pre-wrap;
+        }
+
+        /* API 文档样式 */
+        .api-docs {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .api-section {
+            margin: 30px 0;
+        }
+
+        .api-section h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+        }
+
+        .code-block {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        .code-block pre {
+            margin: 0;
+        }
+
+        .code-block code {
+            font-family: 'Courier New', monospace;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .example {
+            margin: 20px 0;
+        }
+
+        .example h4 {
+            color: #34495e;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>插件目录</h1>
+    <h2>目录</h2>
+    <ul>
+        <li><a href="#api-docs">API文档</a></li>
+        <li><a href="#plugin-list">插件列表</a></li>
+    </ul>
+    <section class="api-docs">
+        <h2 id="api-docs">API 文档</h2>
+        
+        <div class="api-section">
+            <h3>请求格式</h3>
+            <div class="code-block">
+                <pre><code>GET /plugins.json
+Accept: application/json</code></pre>
+            </div>
+        </div>
+
+        <div class="api-section">
+            <h3>响应示例</h3>
+            <div class="code-block">
+                <pre><code>[
+    {
+        "id": "guguwebui",
+        "authors": [
+            {
+            "name": "XueK66",
+            "link": "https://github.com/XueK66"
+            },
+            {
+            "name": "LoosePrince",
+            "link": "https://github.com/LoosePrince"
+            }
+        ],
+        "repository_url": "https://github.com/LoosePrince/PF-MCDR-WebUI/tree/main/src",
+        "labels": [
+            "information",
+            "management"
+        ],
+        "name": "GUGU WebUI",
+        "version": "1.2.3",
+        "description": {
+            "en_us": "Config manerager using webui interface.",
+            "zh_cn": "使用webui来管理所有插件参数设置"
+        },
+        "dependencies": {},
+        "update_time": "2025-01-24 17:27:10",
+        "latest_version": "1.2.3"
+    }
+]</code></pre>
+            </div>
+        </div>
+
+        <div class="api-section">
+            <h3>使用方法</h3>
+            <div class="example">
+                <h4>基本用法</h4>
+                <div class="code-block">
+                    <pre><code>fetch('/plugins.json')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        // 处理数据
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });</code></pre>
+                </div>
+            </div>
+
+            <div class="example">
+                <h4>过滤插件示例</h4>
+                <div class="code-block">
+                    <pre><code>// 获取版本大于1.0.0的插件
+fetch('/plugins.json')
+    .then(response => response.json())
+    .then(data => {
+        const filtered = data.filter(plugin => {
+            return semver.gt(plugin.version, '1.0.0');
+        });
+        console.log(filtered);
+    });</code></pre>
+                </div>
+            </div>
+
+            <div class="example">
+                <h4>按作者搜索</h4>
+                <div class="code-block">
+                    <pre><code>// 查找特定作者的插件
+fetch('/plugins.json')
+    .then(response => response.json())
+    .then(data => {
+        const authorPlugins = data.filter(plugin => {
+            return plugin.authors.some(author => 
+                author.name.includes('张')
+            );
+        });
+        console.log(authorPlugins);
+    });</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+    <h2 id="plugin-list">插件列表</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>名称</th>
+                <th>版本</th>
+                <th>描述</th>
+                <th>作者</th>
+                <th>更新时间</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 插件数据将通过JavaScript动态填充 -->
+        </tbody>
+    </table>
+
+    <script>
+        // 获取插件数据
+        fetch('plugins.json')
+            .then(response => response.json())
+            .then(data => {
+                const tbody = document.querySelector('tbody');
+                
+                data.forEach(plugin => {
+                    const row = document.createElement('tr');
+                    
+                    // 名称
+                    const nameCell = document.createElement('td');
+                    nameCell.textContent = plugin.name || plugin.id;
+                    row.appendChild(nameCell);
+                    
+                    // 版本
+                    const versionCell = document.createElement('td');
+                    versionCell.textContent = plugin.version || 'N/A';
+                    row.appendChild(versionCell);
+                    
+                    // 描述
+                    const descCell = document.createElement('td');
+                    descCell.className = 'description';
+                    const desc = plugin.description?.zh_cn || plugin.description?.en_us || '无描述';
+                    descCell.textContent = desc;
+                    row.appendChild(descCell);
+                    
+                    // 作者
+                    const authorCell = document.createElement('td');
+                    const authors = plugin.authors?.map(a => a.name).join(', ') || '未知';
+                    authorCell.textContent = authors;
+                    row.appendChild(authorCell);
+                    
+                    // 更新时间
+                    const updateCell = document.createElement('td');
+                    updateCell.textContent = plugin.update_time || '未知';
+                    row.appendChild(updateCell);
+                    
+                    tbody.appendChild(row);
+                });
+            })
+            .catch(error => {
+                console.error('加载插件数据失败:', error);
+            });
+    </script>
+</body>
+</html>
