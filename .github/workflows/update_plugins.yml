@@ -1,0 +1,50 @@
+name: Plugin Data Updater
+
+on:
+  schedule:
+    - cron: '0 */1 * * *'  # 每小时运行
+  workflow_dispatch:        # 手动触发
+  push:                     # 代码变更时触发
+    branches: [ main ]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+        cache: 'pip'  # 启用依赖缓存
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+    - name: Run scraper
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        CACHE_ENABLED: 'true'  # 新增缓存控制
+      run: |
+        python scripts/plugin_scraper.py \
+          --timeout 30 \
+          --retry 5
+
+    - name: Commit changes
+      if: success() && github.ref == 'refs/heads/main'
+      run: |
+        git config --global user.name "Automated Updater"
+        git config --global user.email "actions@users.noreply.github.com"
+        git add data/plugins.json
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update: $(date +'%Y-%m-%d %H:%M')" && git push)
+
+    - name: Cleanup
+      if: always()
+      run: |
+        history -c
+        rm -rf ~/.bash_history
+        echo "Cleanup complete"
