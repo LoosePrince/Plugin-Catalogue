@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main  # 当 main 分支有提交时触发部署
+  workflow_run:
+    workflows: ["Plugin Data Updater"]  # 确保触发的工作流名称正确
+    types:
+      - completed  # 当 "Plugin Data Updater" 完成后才触发
 
 permissions:
   contents: read
