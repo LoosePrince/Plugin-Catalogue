@@ -5,6 +5,7 @@ from threading import Lock
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
 from datetime import datetime
+import pytz
 import re
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
@@ -31,6 +32,11 @@ def create_session():
     )
     session.mount('https://', HTTPAdapter(max_retries=retries))
     return session
+
+def get_beijing_time():
+    """获取当前北京时间"""
+    tz = pytz.timezone("Asia/Shanghai")
+    return datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S")
 
 def fetch_version(plugin_name):
     """获取插件版本"""
@@ -246,9 +252,6 @@ def get_plugins_info():
                     # 获取元数据
                     metadata = fetch_plugin_metadata(session, meta_url)
                     
-                    # 记录当前UTC时间作为更新时间
-                    update_time = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
-                    
                     # 基础数据必须存在的字段
                     plugin_data = {
                         "id": plugin_info['id'],  # 必须存在
@@ -259,7 +262,7 @@ def get_plugins_info():
                         "version": None,
                         "description": process_description(plugin_info.get('description', {})),
                         "dependencies": None,
-                        "update_time": update_time,
+                        "update_time": get_beijing_time(),  # 使用北京时间
                         "latest_version": None
                     }
 
