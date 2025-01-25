@@ -6,6 +6,8 @@ on:
   workflow_dispatch:        # 手动触发
   push:                     # 代码变更时触发
     branches: [ main ]
+    paths:
+      - 'scripts/**'
 
 jobs:
   update:
