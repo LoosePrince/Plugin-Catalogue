@@ -122,7 +122,8 @@ Accept: application/json</code></pre>
         },
         "dependencies": {},
         "update_time": "2025-01-24 17:27:10",
-        "latest_version": "1.2.3"
+        "latest_version": "1.2.3",
+        "last_update_time": "2025-01-25 12:56:01.000"
     }
 ]</code></pre>
             </div>
@@ -229,7 +230,7 @@ fetch('/plugins.json')
                     
                     // 更新时间
                     const updateCell = document.createElement('td');
-                    updateCell.textContent = plugin.update_time || '未知';
+                    updateCell.textContent = plugin.last_update_time || '未知';
                     row.appendChild(updateCell);
                     
                     tbody.appendChild(row);
