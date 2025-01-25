@@ -42,7 +42,7 @@ def fetch_version(plugin_name):
     """获取插件版本和更新时间"""
     url = f"https://mcdreforged.com/zh-CN/plugin/{plugin_name}?_rsc=1rz10"
     try:
-        response = requests.get(url, timeout=5, verify=SSL_VERIFY)
+        response = requests.get(url, timeout=TIMEOUT, verify=SSL_VERIFY)
         response.raise_for_status()
         
         # 获取版本
@@ -357,7 +357,7 @@ def save_plugins_data(plugins):
 if __name__ == "__main__":
     # 测试网络连接
     try:
-        test_response = requests.get("https://api.github.com", timeout=5, verify=SSL_VERIFY)
+        test_response = requests.get("https://api.github.com", timeout=TIMEOUT, verify=SSL_VERIFY)
         print("GitHub API连接测试:", "成功" if test_response.ok else "失败")
     except Exception as e:
         print("网络连接测试失败:", str(e))
