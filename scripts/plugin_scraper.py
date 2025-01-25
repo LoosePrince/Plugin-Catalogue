@@ -39,36 +39,63 @@ def get_beijing_time():
     return datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S")
 
 def fetch_version(plugin_name):
-    """获取插件版本"""
+    """获取插件版本和更新时间"""
     url = f"https://mcdreforged.com/zh-CN/plugin/{plugin_name}?_rsc=1rz10"
     try:
         response = requests.get(url, timeout=5, verify=SSL_VERIFY)
         response.raise_for_status()
-        match = re.search(rf'/plugin/{plugin_name}/release/([\d\.]+)', response.text)
-        print(f"获取版本成功 {plugin_name}: {match.group(1)}")
-        return match.group(1) if match else None
+        
+        # 获取版本
+        version = None
+        version_match = re.search(rf'/plugin/{plugin_name}/release/([\d\.]+)', response.text)
+        if version_match:
+            version = version_match.group(1)
+        
+        # 获取更新时间
+        last_update_time = None
+        datetime_list = []
+        lines = response.text.split('\n')
+        for line in lines:
+            line = line.replace(r'\"', '"')
+            matches = re.findall(r'{"date":"\$D(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z)"}', line)
+            if matches:
+                for match in matches:
+                    formatted_datetime = match[:-1].replace('T', ' ')
+                    datetime_list.append(formatted_datetime)
+        if datetime_list:
+            last_update_time = datetime_list[-1]
+            
+        print(f"获取插件信息成功 {plugin_name}: 版本={version}, 更新时间={last_update_time}")
+        return version, last_update_time
     except Exception as e:
-        print(f"获取版本失败 {plugin_name}: {str(e)}")
-        return None
+        print(f"获取插件信息失败 {plugin_name}: {str(e)}")
+        return None, None
 
 def get_plugin_versions(plugin_dict):
     """
-    获取插件版本信息
+    获取插件版本信息和最后更新时间
     """
-    results = {}
+    versions = {}
+    last_update_times = {}
     start_time = time.time()
 
     with ThreadPoolExecutor(max_workers=10) as executor:
-        future_to_plugin = {executor.submit(fetch_version, name): name for name in plugin_dict.values()}
+        future_to_plugin = {
+            executor.submit(fetch_version, name): name
+            for name in plugin_dict.values()
+        }
+        
         for future in as_completed(future_to_plugin):
             plugin_name = future_to_plugin[future]
             try:
-                version = future.result()
-                results[plugin_name] = version
+                version, last_update_time = future.result()
+                versions[plugin_name] = version
+                last_update_times[plugin_name] = last_update_time
             except Exception:
-                results[plugin_name] = None
+                versions[plugin_name] = None
+                last_update_times[plugin_name] = None
 
-    return results
+    return versions, last_update_times
 
 def build_jsdelivr_url(repo_url):
     """从仓库URL构造mcdreforged.plugin.json的JsDelivr地址"""
@@ -148,11 +175,6 @@ def merge_plugin_data(original_data, metadata):
     # 插件名称（保留原始数据）
     merged['name'] = original_data.get('name') or metadata.get('name')
     
-    # 作者信息（合并而非覆盖）
-    # original_authors = process_author(original_data.get('authors', []))
-    # meta_authors = process_author(metadata.get('author', []))
-    # merged['authors'] = unique_author_merge(original_authors, meta_authors)
-    
     # 描述信息（补充翻译内容）
     merged_desc = process_description(original_data.get('description', {}))
     meta_desc = process_description(metadata.get('description', {}))
@@ -202,6 +224,86 @@ def build_repo_url(plugin_info):
         print(f"仓库链接构造失败: {str(e)}")
         return None
     
+def process_plugin_info(session, item):
+    """处理单个插件信息"""
+    if item['type'] != 'dir':
+        return None
+    
+    plugin_name = item['name']
+    try:
+        # 构造JsDelivr的URL
+        jsdelivr_url = f"https://cdn.jsdelivr.net/gh/MCDReforged/PluginCatalogue@master/plugins/{plugin_name}/plugin_info.json"
+        # 发送请求到JsDelivr，不使用认证头
+        info_response = session.get(
+            jsdelivr_url,
+            headers={'User-Agent': 'MCDReforged-Plugin-Scraper'},
+            timeout=TIMEOUT,
+            verify=SSL_VERIFY
+        )
+        info_response.raise_for_status()
+        
+        content = info_response.text
+        plugin_info = json.loads(content)
+        
+        # 构造仓库链接（清理冗余路径）
+        repo_url = f"{plugin_info['repository']}/tree/{plugin_info['branch']}"
+        if plugin_info.get('related_path'):
+            related_path = os.path.normpath(plugin_info['related_path']).replace('\\', '/').strip('/')
+            if related_path != '.':
+                repo_url += f"/{related_path}"
+
+        # 构造JsDelivr元数据地址
+        meta_url = build_jsdelivr_url(repo_url)
+        if not meta_url:
+            print(f"无效仓库地址: {repo_url}")
+            return None
+            
+        # 获取元数据
+        metadata = fetch_plugin_metadata(session, meta_url)
+        
+        # 基础数据必须存在的字段
+        plugin_data = {
+            "id": plugin_info['id'],  # 必须存在
+            "authors": process_author(plugin_info.get('authors', [])),
+            "repository_url": build_repo_url(plugin_info),
+            "labels": plugin_info.get('labels', []),
+            "name": plugin_info.get('name'),  # 原始数据可能没有
+            "version": None,
+            "description": process_description(plugin_info.get('description', {})),
+            "dependencies": None,
+            "update_time": get_beijing_time(),  # 使用北京时间
+            "latest_version": None
+        }
+
+        try:
+            # 构造仓库链接
+            repo_url = build_repo_url(plugin_info)
+            plugin_data['repository_url'] = repo_url if repo_url else None
+            
+            # 合并元数据
+            if repo_url:
+                meta_url = build_jsdelivr_url(repo_url)
+                metadata = fetch_plugin_metadata(session, meta_url) if meta_url else None
+                
+                # 合并元数据（不影响已存在的有效字段）
+                if metadata:
+                    plugin_data = merge_plugin_data(plugin_data, metadata)
+            
+            # 确保最终数据结构
+            plugin_data['authors'] = process_author(plugin_data['authors']) or []
+            plugin_data['description'] = process_description(plugin_data['description'])
+            
+        except Exception as e:
+            print(f"插件数据处理异常: {str(e)}")
+            # 保留已获取的基础信息
+        
+        print(f"获取 {plugin_name} 信息成功")
+        return plugin_data, plugin_info['id']
+        
+    except Exception as e:
+        print(f"获取 {plugin_name} 信息失败: {str(e)}")
+        return None, None
+
 def get_plugins_info():
     """获取所有插件信息"""
     plugins = []
@@ -209,7 +311,7 @@ def get_plugins_info():
     
     try:
         session = create_session()
-        # 使用GitHub API获取插件列表（保持原样）
+        # 使用GitHub API获取插件列表
         response = session.get(
             GITHUB_API,
             headers=HEADERS,
@@ -218,95 +320,23 @@ def get_plugins_info():
         )
         response.raise_for_status()
         
-        for item in response.json():
-            if item['type'] == 'dir':
-                plugin_name = item['name']
-                try:
-                    # 构造JsDelivr的URL
-                    jsdelivr_url = f"https://cdn.jsdelivr.net/gh/MCDReforged/PluginCatalogue@master/plugins/{plugin_name}/plugin_info.json"
-                    # 发送请求到JsDelivr，不使用认证头
-                    info_response = session.get(
-                        jsdelivr_url,
-                        headers={'User-Agent': 'MCDReforged-Plugin-Scraper'},
-                        timeout=TIMEOUT,
-                        verify=SSL_VERIFY
-                    )
-                    info_response.raise_for_status()
-                    
-                    content = info_response.text
-                    plugin_info = json.loads(content)
-                    
-                    # 构造仓库链接（清理冗余路径）
-                    repo_url = f"{plugin_info['repository']}/tree/{plugin_info['branch']}"
-                    if plugin_info.get('related_path'):
-                        related_path = os.path.normpath(plugin_info['related_path']).replace('\\', '/').strip('/')
-                        if related_path != '.':
-                            repo_url += f"/{related_path}"
-
-                    # 构造JsDelivr元数据地址
-                    meta_url = build_jsdelivr_url(repo_url)
-                    if not meta_url:
-                        print(f"无效仓库地址: {repo_url}")
-                        continue
-                        
-                    # 获取元数据
-                    metadata = fetch_plugin_metadata(session, meta_url)
-                    
-                    # 基础数据必须存在的字段
-                    plugin_data = {
-                        "id": plugin_info['id'],  # 必须存在
-                        "authors": process_author(plugin_info.get('authors', [])),
-                        "repository_url": build_repo_url(plugin_info),
-                        "labels": plugin_info.get('labels', []),
-                        "name": plugin_info.get('name'),  # 原始数据可能没有
-                        "version": None,
-                        "description": process_description(plugin_info.get('description', {})),
-                        "dependencies": None,
-                        "update_time": get_beijing_time(),  # 使用北京时间
-                        "latest_version": None
-                    }
-
-                    # if metadata:
-                    #     plugin_data = merge_plugin_data(plugin_data, metadata)
-                    #     print(f"成功合并 {plugin_name} 元数据")
-                    # else:
-                    #     print(f"未找到 {plugin_name} 元数据文件")
-                    
-                    # plugins.append(plugin_data)
-                    try:
-                        # 构造仓库链接
-                        repo_url = build_repo_url(plugin_info)
-                        plugin_data['repository_url'] = repo_url if repo_url else None
-                        
-                        # 合并元数据
-                        if repo_url:
-                            meta_url = build_jsdelivr_url(repo_url)
-                            metadata = fetch_plugin_metadata(session, meta_url) if meta_url else None
-                            
-                            # 合并元数据（不影响已存在的有效字段）
-                            if metadata:
-                                plugin_data = merge_plugin_data(plugin_data, metadata)
-                        
-                        # 确保最终数据结构
-                        plugin_data['authors'] = process_author(plugin_data['authors']) or []
-                        plugin_data['description'] = process_description(plugin_data['description'])
-                        
-                    except Exception as e:
-                        print(f"插件数据处理异常: {str(e)}")
-                        # 保留已获取的基础信息
-                    
+        # 使用线程池并发处理插件信息
+        with ThreadPoolExecutor(max_workers=8) as executor:
+            futures = []
+            for item in response.json():
+                futures.append(executor.submit(process_plugin_info, session, item))
+            
+            for future in as_completed(futures):
+                plugin_data, plugin_id = future.result()
+                if plugin_data and plugin_id:
                     plugins.append(plugin_data)
-                    plugin_dict[plugin_info['id']] = plugin_info['id']
-                    print(f"获取 {plugin_name} 信息成功")
-                    
-                except Exception as e:
-                    print(f"获取 {plugin_name} 信息失败: {str(e)}")
-                    continue
+                    plugin_dict[plugin_id] = plugin_id
 
-        # 获取版本信息并填充 latest_version
-        versions = get_plugin_versions(plugin_dict)
+        # 获取版本信息和更新时间
+        versions, update_times = get_plugin_versions(plugin_dict)
         for plugin in plugins:
             plugin["latest_version"] = versions.get(plugin["id"], None)
+            plugin["last_update_time"] = update_times.get(plugin["id"], get_beijing_time())
 
     except Exception as e:
         print(f"主流程错误: {str(e)}")
