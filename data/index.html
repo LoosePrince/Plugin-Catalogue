@@ -73,6 +73,16 @@
             color: #34495e;
             margin-bottom: 10px;
         }
+
+        #plugin-list span {
+            margin-left: 10px;
+            font-size: 16px;
+        }
+
+        #update-time {
+            font-size: 14px;
+            color: #999;
+        }
     </style>
 </head>
 <body>
@@ -199,7 +209,7 @@ fetch('/plugins.json')
             </div>
         </div>
     </section>
-    <h2 id="plugin-list">插件列表</h2>
+    <h2 id="plugin-list">插件列表<span>数据更新时间:<span id="update-time">2025-01-25 12:56:01.000</span></span></h2>
     <table>
         <thead>
             <tr>
@@ -221,7 +231,8 @@ fetch('/plugins.json')
             .then(response => response.json())
             .then(data => {
                 const tbody = document.querySelector('tbody');
-                
+                const updateTime = document.getElementById('update-time');
+                updateTime.textContent = data[0].update_time;
                 data.forEach(plugin => {
                     const row = document.createElement('tr');
                     
