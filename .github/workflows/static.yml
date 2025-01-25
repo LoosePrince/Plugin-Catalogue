@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main  # 当 main 分支有提交时触发部署
+    paths:
+      - 'data/**'
   workflow_run:
     workflows: ["Plugin Data Updater"]  # 确保触发的工作流名称正确
     types:
