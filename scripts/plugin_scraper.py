@@ -62,8 +62,8 @@ def fetch_version(plugin_name):
                 for match in matches:
                     formatted_datetime = match[:-1].replace('T', ' ')
                     datetime_list.append(formatted_datetime)
-        if datetime_list:
-            last_update_time = datetime_list[-1]
+        if len(datetime_list) >= 2:
+            last_update_time = datetime_list[1]
             
         print(f"获取插件信息成功 {plugin_name}: 版本={version}, 更新时间={last_update_time}")
         return version, last_update_time
