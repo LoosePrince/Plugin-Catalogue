@@ -1,26 +1,51 @@
 [
   {
-    "id": "auto_plugin_reloader",
+    "id": "auto_execute",
     "authors": [
       {
-        "name": "Fallen_Breath",
-        "link": "https://github.com/Fallen-Breath"
+        "name": "FRUITS-CANDY",
+        "link": "https://github.com/FRUITS-CANDY"
       }
     ],
-    "repository_url": "https://github.com/TISUnion/AutoPluginReloader/tree/master",
+    "repository_url": "https://github.com/Passion-Never-Dissipate/Auto-Execute/tree/master",
+    "labels": [
+      "tool"
+    ],
+    "name": "Auto-Execute",
+    "version": "1.1.0",
+    "description": {
+      "en_us": "An MCDR plugin that stores various instructions for multimodal execution based on scripts",
+      "zh_cn": "一个以脚本为单位存储各类指令多模式执行的MCDR插件"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.6.0"
+    },
+    "update_time": "2025-03-03 22:08:24",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "auto_backup",
+    "authors": [
+      {
+        "name": "Kongtu5i",
+        "link": "https://github.com/Kongtu5i"
+      }
+    ],
+    "repository_url": "https://github.com/Kongtu5i/AutoBackup/tree/main",
     "labels": [
       "management"
     ],
-    "name": "Auto Plugin Reloader",
-    "version": "2.0.0",
+    "name": "AutoBackup",
+    "version": "0.2.0",
     "description": {
-      "en_us": "Automatically reload plugins when file changes",
-      "zh_cn": "在文件变更时自动重载插件"
+      "en_us": "auto make a backup when a player joined the server if he(she) in the backup player list",
+      "zh_cn": "当自动备份名单中的玩家加入服务器时自动备份"
     },
     "dependencies": {
-      "mcdreforged": ">=2.13.0"
+      "mcdreforged": ">=2.6.0"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:24",
     "latest_version": null,
     "last_update_time": null
   },
@@ -46,30 +71,7 @@
       "mcdreforged": ">=2.1.0",
       "minecraft_data_api": "*"
     },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "advanced_calculator",
-    "authors": [
-      {
-        "name": "Andy Zhang",
-        "link": "https://github.com/AnzhiZhang"
-      }
-    ],
-    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/advanced_calculator",
-    "labels": [
-      "tool"
-    ],
-    "name": "AdvancedCalculator",
-    "version": "0.3.1",
-    "description": {
-      "en_us": "Provides multiple convenient in-game calculations",
-      "zh_cn": "提供游戏内多种便捷计算"
-    },
-    "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:24",
     "latest_version": null,
     "last_update_time": null
   },
@@ -92,138 +94,55 @@
       "zh_cn": "在游戏某些区域自动弹出消息。"
     },
     "dependencies": {},
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:24",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "auto_backup",
+    "id": "auto_plugin_reloader",
     "authors": [
       {
-        "name": "Kongtu5i",
-        "link": "https://github.com/Kongtu5i"
+        "name": "Fallen_Breath",
+        "link": "https://github.com/Fallen-Breath"
       }
     ],
-    "repository_url": "https://github.com/Kongtu5i/AutoBackup/tree/main",
+    "repository_url": "https://github.com/TISUnion/AutoPluginReloader/tree/master",
     "labels": [
       "management"
     ],
-    "name": "AutoBackup",
-    "version": "0.2.0",
+    "name": "Auto Plugin Reloader",
+    "version": "2.0.0",
     "description": {
-      "en_us": "auto make a backup when a player joined the server if he(she) in the backup player list",
-      "zh_cn": "当自动备份名单中的玩家加入服务器时自动备份"
+      "en_us": "Automatically reload plugins when file changes",
+      "zh_cn": "在文件变更时自动重载插件"
     },
     "dependencies": {
-      "mcdreforged": ">=2.6.0"
+      "mcdreforged": ">=2.13.0"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:24",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "auto_execute",
+    "id": "better_backup",
     "authors": [
       {
-        "name": "FRUITS-CANDY",
-        "link": "https://github.com/FRUITS-CANDY"
+        "name": "z0z0r4",
+        "link": "https://github.com/z0z0r4"
       }
     ],
-    "repository_url": "https://github.com/Passion-Never-Dissipate/Auto-Execute/tree/master",
-    "labels": [
-      "tool"
-    ],
-    "name": "Auto-Execute",
-    "version": "1.1.0",
-    "description": {
-      "en_us": "An MCDR plugin that stores various instructions for multimodal execution based on scripts",
-      "zh_cn": "一个以脚本为单位存储各类指令多模式执行的MCDR插件"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.6.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "advanced_whitelist_r",
-    "authors": [
-      {
-        "name": "noionion",
-        "link": "https://github.com/2X-ercha"
-      },
-      {
-        "name": "GamerNoTitle",
-        "link": "https://github.com/GamerNoTitle"
-      }
-    ],
-    "repository_url": "https://github.com/EMUnion/AdvancedWhitelistR/tree/master",
+    "repository_url": "https://github.com/z0z0r4/better_backup/tree/master",
     "labels": [
       "management"
     ],
-    "name": "AdvancedWhitelistR",
-    "version": "1.0.3",
+    "name": "Better Backup",
+    "version": "2.1.7",
     "description": {
-      "en_us": "For outline-model Whitelist",
-      "zh_cn": "For outline-model Whitelist"
+      "en_us": "A plugin that supports efficient backup/rollback with file deduplication",
+      "zh_cn": "支持文件去重的高效备份/回档插件"
     },
-    "dependencies": {
-      "mcdreforged": ">=2.1.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "allow_suicide",
-    "authors": [
-      {
-        "name": "JAs0n",
-        "link": "https://github.com/JAs0n319"
-      }
-    ],
-    "repository_url": "https://github.com/JAs0n319/allow_suicide/tree/master",
-    "labels": [
-      "tool"
-    ],
-    "name": "allow_suicide",
-    "version": "1.0.0",
-    "description": {
-      "en_us": "allow player suicide with no op",
-      "zh_cn": "允许玩家在没有op权限时自杀"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.1.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "bedrock_liteloader_handler",
-    "authors": [
-      {
-        "name": "Elec glacier",
-        "link": "https://github.com/Elec-Glacier"
-      },
-      {
-        "name": "jiangyan",
-        "link": "https://github.com/jiangyan03"
-      }
-    ],
-    "repository_url": "https://github.com/Elec-Glacier/liteloader_handler/tree/main",
-    "labels": [
-      "handler"
-    ],
-    "name": "BedrockLiteloaderHandler",
-    "version": "1.1.2",
-    "description": {
-      "en_us": "A handler which allows BDS(bedrock dedicated server) to use MCDR",
-      "zh_cn": "一个让基岩版也能使用MCDR的处理器"
-    },
-    "dependencies": {},
-    "update_time": "2025-03-03 21:17:44",
+    "dependencies": null,
+    "update_time": "2025-03-03 22:08:24",
     "latest_version": null,
     "last_update_time": null
   },
@@ -249,55 +168,9 @@
     "dependencies": {
       "mcdreforged": ">=2.1.0"
     },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "better_backup",
-    "authors": [
-      {
-        "name": "z0z0r4",
-        "link": "https://github.com/z0z0r4"
-      }
-    ],
-    "repository_url": "https://github.com/z0z0r4/better_backup/tree/master",
-    "labels": [
-      "management"
-    ],
-    "name": "Better Backup",
-    "version": "2.1.7",
-    "description": {
-      "en_us": "A plugin that supports efficient backup/rollback with file deduplication",
-      "zh_cn": "支持文件去重的高效备份/回档插件"
-    },
-    "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "bingo",
-    "authors": [
-      {
-        "name": "Andy Zhang",
-        "link": "https://github.com/AnzhiZhang"
-      }
-    ],
-    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/bingo",
-    "labels": [
-      "tool"
-    ],
-    "name": "Bingo",
-    "version": "0.0.3",
-    "description": {
-      "en_us": "Useful tool for Bingo game",
-      "zh_cn": "Bingo 游戏实用工具"
-    },
-    "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
+    "update_time": "2025-03-03 22:08:24",
+    "latest_version": "0.0.3",
+    "last_update_time": "2025-03-03 07:53:01.000"
   },
   {
     "id": "beep",
@@ -324,7 +197,57 @@
     "dependencies": {
       "mcdreforged": ">=2.1.0"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:24",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "bedrock_liteloader_handler",
+    "authors": [
+      {
+        "name": "Elec glacier",
+        "link": "https://github.com/Elec-Glacier"
+      },
+      {
+        "name": "jiangyan",
+        "link": "https://github.com/jiangyan03"
+      }
+    ],
+    "repository_url": "https://github.com/Elec-Glacier/liteloader_handler/tree/main",
+    "labels": [
+      "handler"
+    ],
+    "name": "BedrockLiteloaderHandler",
+    "version": "1.1.2",
+    "description": {
+      "en_us": "A handler which allows BDS(bedrock dedicated server) to use MCDR",
+      "zh_cn": "一个让基岩版也能使用MCDR的处理器"
+    },
+    "dependencies": {},
+    "update_time": "2025-03-03 22:08:24",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "bingo",
+    "authors": [
+      {
+        "name": "Andy Zhang",
+        "link": "https://github.com/AnzhiZhang"
+      }
+    ],
+    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/bingo",
+    "labels": [
+      "tool"
+    ],
+    "name": "Bingo",
+    "version": "0.0.3",
+    "description": {
+      "en_us": "Useful tool for Bingo game",
+      "zh_cn": "Bingo 游戏实用工具"
+    },
+    "dependencies": null,
+    "update_time": "2025-03-03 22:08:24",
     "latest_version": null,
     "last_update_time": null
   },
@@ -349,35 +272,7 @@
     "dependencies": {
       "mcdreforged": ">=2.12.0"
     },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "bot",
-    "authors": [
-      {
-        "name": "Andy Zhang",
-        "link": "https://github.com/AnzhiZhang"
-      }
-    ],
-    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/bot",
-    "labels": [
-      "tool",
-      "management"
-    ],
-    "name": "Bot",
-    "version": "1.3.1",
-    "description": {
-      "en_us": "The best carpet bot manager!",
-      "zh_cn": "最好用的地毯模组假人管理器！"
-    },
-    "dependencies": {
-      "mcdreforged": "^2.6.0",
-      "minecraft_data_api": "^1.4.1",
-      "more_command_nodes": "^1.1.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:24",
     "latest_version": null,
     "last_update_time": null
   },
@@ -403,7 +298,35 @@
     "dependencies": {
       "mcdreforged": ">=2.1.0"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:24",
+    "latest_version": "0.3.0",
+    "last_update_time": "2025-02-06 13:41:06.000"
+  },
+  {
+    "id": "bot",
+    "authors": [
+      {
+        "name": "Andy Zhang",
+        "link": "https://github.com/AnzhiZhang"
+      }
+    ],
+    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/bot",
+    "labels": [
+      "tool",
+      "management"
+    ],
+    "name": "Bot",
+    "version": "1.3.1",
+    "description": {
+      "en_us": "The best carpet bot manager!",
+      "zh_cn": "最好用的地毯模组假人管理器！"
+    },
+    "dependencies": {
+      "mcdreforged": "^2.6.0",
+      "minecraft_data_api": "^1.4.1",
+      "more_command_nodes": "^1.1.0"
+    },
+    "update_time": "2025-03-03 22:08:24",
     "latest_version": null,
     "last_update_time": null
   },
@@ -430,58 +353,7 @@
       "mcdreforged": ">=2.3.0",
       "minecraft_data_api": ">=1.4.0"
     },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "carpet_tick",
-    "authors": [
-      {
-        "name": "Ivan1F",
-        "link": "https://github.com/Ivan-1F"
-      }
-    ],
-    "repository_url": "https://github.com/Ivan-1F/CarpetTick/tree/master",
-    "labels": [
-      "information"
-    ],
-    "name": "Carpet Tick",
-    "version": "1.1.1",
-    "description": {
-      "en_us": "Get server status using carpet /tick command",
-      "zh_cn": "使用 Carpet Mod 的 /tick 指令获取服务器信息"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.1.0-beta"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "carpet_bot_manager",
-    "authors": [
-      {
-        "name": "YehowahLiu",
-        "link": "https://github.com/YehowahLiu"
-      }
-    ],
-    "repository_url": "https://github.com/FAS-Server/CarpetBotManager/tree/main",
-    "labels": [
-      "tool"
-    ],
-    "name": "Carpet Bot Manager",
-    "version": "0.3.5",
-    "description": {
-      "en_us": "A carpet bot manage plugin, able to spawn bot and make it execute actions",
-      "zh_cn": "一个地毯端bot管理插件, 可以点击召唤bot并让其执行系列动作"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.6.0",
-      "minecraft_data_api": ">=1.4.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:24",
     "latest_version": null,
     "last_update_time": null
   },
@@ -511,7 +383,83 @@
     "dependencies": {
       "mcdreforged": ">=2.0.0"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:24",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "carpet_bot_manager",
+    "authors": [
+      {
+        "name": "YehowahLiu",
+        "link": "https://github.com/YehowahLiu"
+      }
+    ],
+    "repository_url": "https://github.com/FAS-Server/CarpetBotManager/tree/main",
+    "labels": [
+      "tool"
+    ],
+    "name": "Carpet Bot Manager",
+    "version": "0.3.5",
+    "description": {
+      "en_us": "A carpet bot manage plugin, able to spawn bot and make it execute actions",
+      "zh_cn": "一个地毯端bot管理插件, 可以点击召唤bot并让其执行系列动作"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.6.0",
+      "minecraft_data_api": ">=1.4.0"
+    },
+    "update_time": "2025-03-03 22:08:24",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "carpet_tick",
+    "authors": [
+      {
+        "name": "Ivan1F",
+        "link": "https://github.com/Ivan-1F"
+      }
+    ],
+    "repository_url": "https://github.com/Ivan-1F/CarpetTick/tree/master",
+    "labels": [
+      "information"
+    ],
+    "name": "Carpet Tick",
+    "version": "1.1.1",
+    "description": {
+      "en_us": "Get server status using carpet /tick command",
+      "zh_cn": "使用 Carpet Mod 的 /tick 指令获取服务器信息"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.1.0-beta"
+    },
+    "update_time": "2025-03-03 22:08:24",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "cato",
+    "authors": [
+      {
+        "name": "Harry-zklcdc",
+        "link": "https://github.com/Harry-zklcdc"
+      }
+    ],
+    "repository_url": "https://github.com/Harry-zklcdc/MCDR-Cato/tree/main",
+    "labels": [
+      "tool"
+    ],
+    "name": "Cato Plugin",
+    "version": "1.1.0",
+    "description": {
+      "en_us": "Plugin Cato",
+      "zh_cn": "Plugin Cato"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.0.0-alpha.1"
+    },
+    "update_time": "2025-03-03 22:08:24",
     "latest_version": null,
     "last_update_time": null
   },
@@ -537,82 +485,7 @@
       "mcdreforged": "^2.0.0-beta.1",
       "minecraft_data_api": "*"
     },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "cato",
-    "authors": [
-      {
-        "name": "Harry-zklcdc",
-        "link": "https://github.com/Harry-zklcdc"
-      }
-    ],
-    "repository_url": "https://github.com/Harry-zklcdc/MCDR-Cato/tree/main",
-    "labels": [
-      "tool"
-    ],
-    "name": "Cato Plugin",
-    "version": "1.1.0",
-    "description": {
-      "en_us": "Plugin Cato",
-      "zh_cn": "Plugin Cato"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.0.0-alpha.1"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "chatbridge",
-    "authors": [
-      {
-        "name": "Fallen_Breath",
-        "link": "https://github.com/Fallen-Breath"
-      }
-    ],
-    "repository_url": "https://github.com/TISUnion/ChatBridge/tree/master",
-    "labels": [
-      "tool"
-    ],
-    "name": "ChatBridge v2 for MCDR",
-    "version": "2.6.3",
-    "description": {
-      "en_us": "Broadcast chats between Minecraft servers and more",
-      "zh_cn": "跨服聊天"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.2.0-"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "chatbridgereforged_mc",
-    "authors": [
-      {
-        "name": "Ricky",
-        "link": "https://github.com/R1ckyH"
-      }
-    ],
-    "repository_url": "https://github.com/R1ckyH/ChatBridgeReforged/tree/master/ChatBridgeReforged_MC",
-    "labels": [
-      "tool"
-    ],
-    "name": "ChatBridgeReforged_MC",
-    "version": "0.2.7-dev032",
-    "description": {
-      "en_us": "Reforged of ChatBridge, interaction with other clients(such as minecraft server, discord bots or other custom clients).",
-      "zh_cn": "ChatBridge 重制, 用于各个客户端（服务器或者其他bot）之间的交互桥梁，多服互联（不是）"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.0.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:24",
     "latest_version": null,
     "last_update_time": null
   },
@@ -637,76 +510,80 @@
     "dependencies": {
       "uuid_api": ">=0.1.2"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:24",
+    "latest_version": "1.4.0",
+    "last_update_time": "2025-03-03 09:25:05.000"
+  },
+  {
+    "id": "baidu_netdisk_backup",
+    "authors": [
+      {
+        "name": "Moran0710",
+        "link": "https://github.com/moran0710"
+      }
+    ],
+    "repository_url": "https://github.com/moran0710/MinecraftServer_BaiduNetdisk_backup/tree/master/baidu_netdisk_backup",
+    "labels": [
+      "management"
+    ],
+    "name": null,
+    "version": null,
+    "description": {
+      "en_us": "",
+      "zh_cn": ""
+    },
+    "dependencies": null,
+    "update_time": "2025-03-03 22:08:24",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "colored_chat",
+    "id": "chatbridge",
     "authors": [
       {
-        "name": "Andy Zhang",
-        "link": "https://github.com/AnzhiZhang"
+        "name": "Fallen_Breath",
+        "link": "https://github.com/Fallen-Breath"
       }
     ],
-    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/.archived/ColoredChat",
+    "repository_url": "https://github.com/TISUnion/ChatBridge/tree/master",
     "labels": [
       "tool"
     ],
-    "name": "ColoredChat",
-    "version": "0.0.3",
+    "name": "ChatBridge v2 for MCDR",
+    "version": "2.6.3",
     "description": {
-      "en_us": "Support formatting codes for vanilla",
-      "zh_cn": "支持原版显示格式化代码"
+      "en_us": "Broadcast chats between Minecraft servers and more",
+      "zh_cn": "跨服聊天"
     },
-    "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
+    "dependencies": {
+      "mcdreforged": ">=2.2.0-"
+    },
+    "update_time": "2025-03-03 22:08:24",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "command_aliases",
+    "id": "chatbridgereforged_mc",
     "authors": [
       {
-        "name": "Andy Zhang",
-        "link": "https://github.com/AnzhiZhang"
+        "name": "Ricky",
+        "link": "https://github.com/R1ckyH"
       }
     ],
-    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/command_aliases",
+    "repository_url": "https://github.com/R1ckyH/ChatBridgeReforged/tree/master/ChatBridgeReforged_MC",
     "labels": [
       "tool"
     ],
-    "name": "Command Aliases",
-    "version": "1.0.0",
+    "name": "ChatBridgeReforged_MC",
+    "version": "0.2.7-dev032",
     "description": {
-      "en_us": "Aliases commands",
-      "zh_cn": "为命令添加别名"
+      "en_us": "Reforged of ChatBridge, interaction with other clients(such as minecraft server, discord bots or other custom clients).",
+      "zh_cn": "ChatBridge 重制, 用于各个客户端（服务器或者其他bot）之间的交互桥梁，多服互联（不是）"
     },
-    "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "colorful_id",
-    "authors": [
-      {
-        "name": "Apricityx_",
-        "link": "https://github.com/Apricityx"
-      }
-    ],
-    "repository_url": "https://github.com/Apricityx/ColorfulID/tree/master",
-    "labels": [
-      "tool"
-    ],
-    "name": "Colorful ID",
-    "version": "1.0.0",
-    "description": {
-      "en_us": "Colorful player names!",
-      "zh_cn": "让玩家的名字五颜六色！"
+    "dependencies": {
+      "mcdreforged": ">=2.0.0"
     },
-    "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:24",
     "latest_version": null,
     "last_update_time": null
   },
@@ -729,82 +606,53 @@
       "zh_cn": "A Server Handler for CleanRoom in Minecraft 1.12.2 on Java21"
     },
     "dependencies": {},
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:24",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "command_exporter",
+    "id": "advanced_calculator",
     "authors": [
       {
-        "name": "DancingSnow",
-        "link": "https://github.com/DancingSnow0517"
+        "name": "Andy Zhang",
+        "link": "https://github.com/AnzhiZhang"
       }
     ],
-    "repository_url": "https://github.com/DancingSnow0517/MCDR-Command-Exporter/tree/master/command_exporter",
+    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/advanced_calculator",
     "labels": [
       "tool"
     ],
-    "name": "MCDR Command Exporter",
-    "version": "1.2.0",
+    "name": "AdvancedCalculator",
+    "version": "0.3.1",
     "description": {
-      "en_us": "A plugin is used to export the MCDR command tree",
-      "zh_cn": "A plugin is used to export the MCDR command tree"
+      "en_us": "Provides multiple convenient in-game calculations",
+      "zh_cn": "提供游戏内多种便捷计算"
     },
-    "dependencies": {
-      "mcdreforged": ">=2.7.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
+    "dependencies": null,
+    "update_time": "2025-03-03 22:08:24",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "commandblock_handler",
+    "id": "colored_chat",
     "authors": [
       {
-        "name": "Dainsleif",
-        "link": "https://github.com/Dainsleif233"
+        "name": "Andy Zhang",
+        "link": "https://github.com/AnzhiZhang"
       }
     ],
-    "repository_url": "https://github.com/Dainsleif233/MCDR-Commandblock-Handler/tree/master",
+    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/.archived/ColoredChat",
     "labels": [
-      "handler"
+      "tool"
     ],
-    "name": "Commandblock Handler",
-    "version": "1.0.1",
+    "name": "ColoredChat",
+    "version": "0.0.3",
     "description": {
-      "en_us": "Enable MCDR commands for function and commandblock.",
-      "zh_cn": "使函数和命令方块能使用MCDR命令."
+      "en_us": "Support formatting codes for vanilla",
+      "zh_cn": "支持原版显示格式化代码"
     },
-    "dependencies": {
-      "mcdreforged": ">=2.0.0-alpha.1"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "cpu_temp",
-    "authors": [
-      {
-        "name": "Ricky",
-        "link": "https://github.com/R1ckyH"
-      }
-    ],
-    "repository_url": "https://github.com/R1ckyH/cpu_temp/tree/master",
-    "labels": [
-      "information"
-    ],
-    "name": "cpu_temp",
-    "version": "3.0.2",
-    "description": {
-      "en_us": "A plugin to check cpu temp regularly.",
-      "zh_cn": "服务器温度警报插件。"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.0.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
+    "dependencies": null,
+    "update_time": "2025-03-03 22:08:24",
     "latest_version": null,
     "last_update_time": null
   },
@@ -828,7 +676,53 @@
       "zh_cn": "将你的Minecraft Server连接到一起并控制。"
     },
     "dependencies": {},
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:24",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "command_aliases",
+    "authors": [
+      {
+        "name": "Andy Zhang",
+        "link": "https://github.com/AnzhiZhang"
+      }
+    ],
+    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/command_aliases",
+    "labels": [
+      "tool"
+    ],
+    "name": "Command Aliases",
+    "version": "1.0.0",
+    "description": {
+      "en_us": "Aliases commands",
+      "zh_cn": "为命令添加别名"
+    },
+    "dependencies": null,
+    "update_time": "2025-03-03 22:08:24",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "colorful_id",
+    "authors": [
+      {
+        "name": "Apricityx_",
+        "link": "https://github.com/Apricityx"
+      }
+    ],
+    "repository_url": "https://github.com/Apricityx/ColorfulID/tree/master",
+    "labels": [
+      "tool"
+    ],
+    "name": "Colorful ID",
+    "version": "1.0.0",
+    "description": {
+      "en_us": "Colorful player names!",
+      "zh_cn": "让玩家的名字五颜六色！"
+    },
+    "dependencies": null,
+    "update_time": "2025-03-03 22:08:24",
     "latest_version": null,
     "last_update_time": null
   },
@@ -855,33 +749,82 @@
       "zh_cn": "处理QQ通信的websocket应用"
     },
     "dependencies": {},
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": "1.2.1",
+    "last_update_time": "2025-02-11 06:55:35.000"
+  },
+  {
+    "id": "command_exporter",
+    "authors": [
+      {
+        "name": "DancingSnow",
+        "link": "https://github.com/DancingSnow0517"
+      }
+    ],
+    "repository_url": "https://github.com/DancingSnow0517/MCDR-Command-Exporter/tree/master/command_exporter",
+    "labels": [
+      "tool"
+    ],
+    "name": "MCDR Command Exporter",
+    "version": "1.2.0",
+    "description": {
+      "en_us": "A plugin is used to export the MCDR command tree",
+      "zh_cn": "A plugin is used to export the MCDR command tree"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.7.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "daycount_nbt",
+    "id": "commandblock_handler",
     "authors": [
       {
-        "name": "Alex3236",
-        "link": "https://github.com/alex3236"
+        "name": "Dainsleif",
+        "link": "https://github.com/Dainsleif233"
       }
     ],
-    "repository_url": "https://github.com/alex3236/daycount-NBT/tree/main/src",
+    "repository_url": "https://github.com/Dainsleif233/MCDR-Commandblock-Handler/tree/master",
     "labels": [
-      "information",
-      "api"
+      "handler"
     ],
-    "name": "DayCount NBT",
-    "version": "2.2.1",
+    "name": "Commandblock Handler",
+    "version": "1.0.1",
     "description": {
-      "en_us": ":calendar: Get and export server opening times.",
-      "zh_cn": ":calendar: 获取和输出服务器开服时间。"
+      "en_us": "Enable MCDR commands for function and commandblock.",
+      "zh_cn": "使函数和命令方块能使用MCDR命令."
     },
     "dependencies": {
-      "mcdreforged": ">=2.2.0"
+      "mcdreforged": ">=2.0.0-alpha.1"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "cpu_temp",
+    "authors": [
+      {
+        "name": "Ricky",
+        "link": "https://github.com/R1ckyH"
+      }
+    ],
+    "repository_url": "https://github.com/R1ckyH/cpu_temp/tree/master",
+    "labels": [
+      "information"
+    ],
+    "name": "cpu_temp",
+    "version": "3.0.2",
+    "description": {
+      "en_us": "A plugin to check cpu temp regularly.",
+      "zh_cn": "服务器温度警报插件。"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.0.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -904,30 +847,7 @@
       "zh_cn": "在服务端崩溃后自动重启服务器的插件"
     },
     "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "database_api",
-    "authors": [
-      {
-        "name": "Andy Zhang",
-        "link": "https://github.com/AnzhiZhang"
-      }
-    ],
-    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/database_api",
-    "labels": [
-      "api"
-    ],
-    "name": "DatabaseAPI",
-    "version": "0.1.1",
-    "description": {
-      "en_us": "Database API to access database",
-      "zh_cn": "访问数据库 API"
-    },
-    "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -952,7 +872,30 @@
     "dependencies": {
       "mcdreforged": "^2.0.0-beta.1"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "database_api",
+    "authors": [
+      {
+        "name": "Andy Zhang",
+        "link": "https://github.com/AnzhiZhang"
+      }
+    ],
+    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/database_api",
+    "labels": [
+      "api"
+    ],
+    "name": "DatabaseAPI",
+    "version": "0.1.1",
+    "description": {
+      "en_us": "Database API to access database",
+      "zh_cn": "访问数据库 API"
+    },
+    "dependencies": null,
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -979,7 +922,7 @@
       "mg_events": ">=0.2.1",
       "minecraft_data_api": ">=1.4"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1006,7 +949,7 @@
       "mcdreforged": "^2.14.0",
       "kpi": "~1.5.0"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1029,7 +972,7 @@
       "zh_cn": ""
     },
     "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1054,33 +997,32 @@
     "dependencies": {
       "mcdreforged": "^2.7.0"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "easy_bot_manager",
+    "id": "allow_suicide",
     "authors": [
       {
-        "name": "LiuTed",
-        "link": "https://github.com/LiuTed"
+        "name": "JAs0n",
+        "link": "https://github.com/JAs0n319"
       }
     ],
-    "repository_url": "https://github.com/LiuTed/EasyBotManager/tree/main",
+    "repository_url": "https://github.com/JAs0n319/allow_suicide/tree/master",
     "labels": [
       "tool"
     ],
-    "name": "Easy Bot Manager",
-    "version": "0.2",
+    "name": "allow_suicide",
+    "version": "1.0.0",
     "description": {
-      "en_us": "Easy-to-use Carpet Bot Manager Plugin",
-      "zh_cn": "Easy-to-use Carpet Bot Manager Plugin"
+      "en_us": "allow player suicide with no op",
+      "zh_cn": "允许玩家在没有op权限时自杀"
     },
     "dependencies": {
-      "mcdreforged": ">=2.0.0",
-      "minecraft_data_api": ">=1.4.0"
+      "mcdreforged": ">=2.1.0"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1108,7 +1050,33 @@
       "player_ip_logger": "*",
       "mcdreforged": ">=2.1.0"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "easy_bot_manager",
+    "authors": [
+      {
+        "name": "LiuTed",
+        "link": "https://github.com/LiuTed"
+      }
+    ],
+    "repository_url": "https://github.com/LiuTed/EasyBotManager/tree/main",
+    "labels": [
+      "tool"
+    ],
+    "name": "Easy Bot Manager",
+    "version": "0.2",
+    "description": {
+      "en_us": "Easy-to-use Carpet Bot Manager Plugin",
+      "zh_cn": "Easy-to-use Carpet Bot Manager Plugin"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.0.0",
+      "minecraft_data_api": ">=1.4.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1135,30 +1103,7 @@
       "minecraft_data_api": ">=1.4",
       "more_command_nodes": ">=1.0"
     },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "baidu_netdisk_backup",
-    "authors": [
-      {
-        "name": "Moran0710",
-        "link": "https://github.com/moran0710"
-      }
-    ],
-    "repository_url": "https://github.com/moran0710/MinecraftServer_BaiduNetdisk_backup/tree/master/baidu_netdisk_backup",
-    "labels": [
-      "management"
-    ],
-    "name": null,
-    "version": null,
-    "description": {
-      "en_us": "",
-      "zh_cn": ""
-    },
-    "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1181,33 +1126,7 @@
       "zh_cn": "我总是同意EULA，不要问我"
     },
     "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "faster_transfer",
-    "authors": [
-      {
-        "name": "Alex3236",
-        "link": "https://github.com/alex3236"
-      }
-    ],
-    "repository_url": "https://github.com/alex3236/FasterTransfer/tree/master/src",
-    "labels": [
-      "tool",
-      "api"
-    ],
-    "name": "Faster Transfer",
-    "version": "0.1.0",
-    "description": {
-      "en_us": ":rocket: Make web? file transfers faster!",
-      "zh_cn": ":rocket: 让任何 MCDR 插件的网络文件传输更迅速！"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.2.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1230,7 +1149,7 @@
       "zh_cn": "提供 HTTP API。"
     },
     "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1253,7 +1172,114 @@
       "zh_cn": "A plugin with multiple functions"
     },
     "dependencies": {},
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "g0d_of_heads",
+    "authors": [
+      {
+        "name": "FRUITS_CANDY",
+        "link": "https://github.com/FRUITS-CANDY"
+      },
+      {
+        "name": "Seeu_SAMA",
+        "link": "https://github.com/SeeU-SAMA"
+      }
+    ],
+    "repository_url": "https://github.com/Passion-Never-Dissipate/G0d-of-Heads/tree/master",
+    "labels": [
+      "tool"
+    ],
+    "name": "G0d of Heads",
+    "version": "1.1.0",
+    "description": {
+      "en_us": "获取任意玩家的任意数量的头颅",
+      "zh_cn": "获取任意玩家的任意数量的头颅"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.6.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": "1.1.0",
+    "last_update_time": "2025-02-18 04:12:31.000"
+  },
+  {
+    "id": "gamemode",
+    "authors": [
+      {
+        "name": "Andy Zhang",
+        "link": "https://github.com/AnzhiZhang"
+      }
+    ],
+    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/gamemode",
+    "labels": [
+      "tool"
+    ],
+    "name": "Gamemode",
+    "version": "1.1.0",
+    "description": {
+      "en_us": "Change to spectator mode for observe, teleport to origin position when change back to survival mode",
+      "zh_cn": "旁观者模式以旁观，返回生存时传送回原坐标"
+    },
+    "dependencies": {
+      "minecraft_data_api": ">=1.4"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "daycount_nbt",
+    "authors": [
+      {
+        "name": "Alex3236",
+        "link": "https://github.com/alex3236"
+      }
+    ],
+    "repository_url": "https://github.com/alex3236/daycount-NBT/tree/main/src",
+    "labels": [
+      "information",
+      "api"
+    ],
+    "name": "DayCount NBT",
+    "version": "2.2.1",
+    "description": {
+      "en_us": ":calendar: Get and export server opening times.",
+      "zh_cn": ":calendar: 获取和输出服务器开服时间。"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.2.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "g15t",
+    "authors": [
+      {
+        "name": "Jel1ySpot",
+        "link": "https://github.com/Jel1ySpot"
+      }
+    ],
+    "repository_url": "https://github.com/Jel1ySpot/MCDReforgedPlugins/tree/main/src/G15T",
+    "labels": [
+      "tool"
+    ],
+    "name": "G15T",
+    "version": "1.0.1",
+    "description": {
+      "en_us": "返回死亡地點",
+      "zh_cn": "返回死亡地點"
+    },
+    "dependencies": {
+      "minecraft_data_api": ">=1.4",
+      "xevents": ">=1.0.0",
+      "mcdreforged": ">=2.1.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1287,65 +1313,9 @@
       "whitelist_api": ">=1.3.0",
       "mg_events": ">=0.2.3"
     },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "g15t",
-    "authors": [
-      {
-        "name": "Jel1ySpot",
-        "link": "https://github.com/Jel1ySpot"
-      }
-    ],
-    "repository_url": "https://github.com/Jel1ySpot/MCDReforgedPlugins/tree/main/src/G15T",
-    "labels": [
-      "tool"
-    ],
-    "name": "G15T",
-    "version": "1.0.1",
-    "description": {
-      "en_us": "返回死亡地點",
-      "zh_cn": "返回死亡地點"
-    },
-    "dependencies": {
-      "minecraft_data_api": ">=1.4",
-      "xevents": ">=1.0.0",
-      "mcdreforged": ">=2.1.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "g0d_of_heads",
-    "authors": [
-      {
-        "name": "FRUITS_CANDY",
-        "link": "https://github.com/FRUITS-CANDY"
-      },
-      {
-        "name": "Seeu_SAMA",
-        "link": "https://github.com/SeeU-SAMA"
-      }
-    ],
-    "repository_url": "https://github.com/Passion-Never-Dissipate/G0d-of-Heads/tree/master",
-    "labels": [
-      "tool"
-    ],
-    "name": "G0d of Heads",
-    "version": "1.1.0",
-    "description": {
-      "en_us": "获取任意玩家的任意数量的头颅",
-      "zh_cn": "获取任意玩家的任意数量的头颅"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.6.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": "1.9.11",
+    "last_update_time": "2025-02-12 06:54:27.000"
   },
   {
     "id": "guguwebui",
@@ -1371,32 +1341,7 @@
       "zh_cn": "使用webui来管理所有插件参数设置"
     },
     "dependencies": {},
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "gamemode",
-    "authors": [
-      {
-        "name": "Andy Zhang",
-        "link": "https://github.com/AnzhiZhang"
-      }
-    ],
-    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/gamemode",
-    "labels": [
-      "tool"
-    ],
-    "name": "Gamemode",
-    "version": "1.1.0",
-    "description": {
-      "en_us": "Change to spectator mode for observe, teleport to origin position when change back to survival mode",
-      "zh_cn": "旁观者模式以旁观，返回生存时传送回原坐标"
-    },
-    "dependencies": {
-      "minecraft_data_api": ">=1.4"
-    },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1421,7 +1366,7 @@
     "dependencies": {
       "minecraft_data_api": "*"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1452,60 +1397,7 @@
       "zh_cn": "显示坐标并高亮玩家"
     },
     "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "homo_calculator",
-    "authors": [
-      {
-        "name": "meng877",
-        "link": "https://github.com/meng877"
-      }
-    ],
-    "repository_url": "https://github.com/meng877/homo_calculator/tree/master",
-    "labels": [
-      "tool"
-    ],
-    "name": "homo_calculator",
-    "version": "11.45.14",
-    "description": {
-      "en_us": "!!homo <int> 将任何数字转化为114514四则运算的形式",
-      "zh_cn": "!!homo <int> 将任何数字转化为114514四则运算的形式"
-    },
-    "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "hibernate_r",
-    "authors": [
-      {
-        "name": "HIM049",
-        "link": "https://github.com/HIM049"
-      },
-      {
-        "name": "sout_Nantang",
-        "link": "https://github.com/sout233"
-      }
-    ],
-    "repository_url": "https://github.com/HIM049/MCDR_HibernateR/tree/master",
-    "labels": [
-      "management"
-    ],
-    "name": "HibernateR",
-    "version": "1.2.3",
-    "description": {
-      "en_us": "A MCDReforged plugin. When there are no player in the server, the plugin can make it shutdown. And if someone want to visit the server, the plugin can make the server start again.",
-      "zh_cn": "一个MCDReforged插件，可以根据服务器内玩家情况自动开启或关闭服务器"
-    },
-    "dependencies": {
-      "online_player_api": "*",
-      "mcdreforged": ">=2.0.0-beta.3"
-    },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1530,53 +1422,30 @@
     "dependencies": {
       "mcdreforged": ">=2.9.0"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "ipanel_mcdreforged",
+    "id": "homo_calculator",
     "authors": [
       {
-        "name": "Zaitonn",
-        "link": "https://github.com/Zaitonn"
+        "name": "meng877",
+        "link": "https://github.com/meng877"
       }
     ],
-    "repository_url": "https://github.com/iPanelDev/iPanel-MCDReforged/tree/master",
+    "repository_url": "https://github.com/meng877/homo_calculator/tree/master",
     "labels": [
-      "management"
+      "tool"
     ],
-    "name": "iPanel-MCDReforged",
-    "version": "2.3.0.0",
+    "name": "homo_calculator",
+    "version": "11.45.14",
     "description": {
-      "en_us": "An iPanel instance plugin for MCDReforged that works with iPanel to provide users with a web-based console.",
-      "zh_cn": "适用于MCDReforged的iPanel实例插件，搭配iPanel使用可为用户提供网页版控制台"
+      "en_us": "!!homo <int> 将任何数字转化为114514四则运算的形式",
+      "zh_cn": "!!homo <int> 将任何数字转化为114514四则运算的形式"
     },
     "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "info",
-    "authors": [
-      {
-        "name": "Andy Zhang",
-        "link": "https://github.com/AnzhiZhang"
-      }
-    ],
-    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/info",
-    "labels": [
-      "information"
-    ],
-    "name": "Info",
-    "version": "0.2.2",
-    "description": {
-      "en_us": "Get server info",
-      "zh_cn": "获取服务器信息"
-    },
-    "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1605,7 +1474,30 @@
     "dependencies": {
       "mcdreforged": ">=2.13.0"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "info",
+    "authors": [
+      {
+        "name": "Andy Zhang",
+        "link": "https://github.com/AnzhiZhang"
+      }
+    ],
+    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/info",
+    "labels": [
+      "information"
+    ],
+    "name": "Info",
+    "version": "0.2.2",
+    "description": {
+      "en_us": "Get server info",
+      "zh_cn": "获取服务器信息"
+    },
+    "dependencies": null,
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1630,30 +1522,110 @@
     "dependencies": {
       "mcdreforged": ">=2.1.0"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": "0.1.0",
+    "last_update_time": "2025-03-01 20:42:38.000"
+  },
+  {
+    "id": "faster_transfer",
+    "authors": [
+      {
+        "name": "Alex3236",
+        "link": "https://github.com/alex3236"
+      }
+    ],
+    "repository_url": "https://github.com/alex3236/FasterTransfer/tree/master/src",
+    "labels": [
+      "tool",
+      "api"
+    ],
+    "name": "Faster Transfer",
+    "version": "0.1.0",
+    "description": {
+      "en_us": ":rocket: Make web? file transfers faster!",
+      "zh_cn": ":rocket: 让任何 MCDR 插件的网络文件传输更迅速！"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.2.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "join_motd",
+    "id": "ipanel_mcdreforged",
     "authors": [
       {
-        "name": "Fallen_Breath",
-        "link": "https://github.com/Fallen-Breath"
+        "name": "Zaitonn",
+        "link": "https://github.com/Zaitonn"
       }
     ],
-    "repository_url": "https://github.com/TISUnion/joinMOTD/tree/master",
+    "repository_url": "https://github.com/iPanelDev/iPanel-MCDReforged/tree/master",
     "labels": [
-      "information"
+      "management"
     ],
-    "name": "Join MOTD",
-    "version": "1.3.0",
+    "name": "iPanel-MCDReforged",
+    "version": "2.3.0.0",
     "description": {
-      "en_us": "Send player a MOTD when he joins",
-      "zh_cn": "当玩家加入游戏时向其发送欢迎信息"
+      "en_us": "An iPanel instance plugin for MCDReforged that works with iPanel to provide users with a web-based console.",
+      "zh_cn": "适用于MCDReforged的iPanel实例插件，搭配iPanel使用可为用户提供网页版控制台"
     },
     "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "advanced_whitelist_r",
+    "authors": [
+      {
+        "name": "noionion",
+        "link": "https://github.com/2X-ercha"
+      },
+      {
+        "name": "GamerNoTitle",
+        "link": "https://github.com/GamerNoTitle"
+      }
+    ],
+    "repository_url": "https://github.com/EMUnion/AdvancedWhitelistR/tree/master",
+    "labels": [
+      "management"
+    ],
+    "name": "AdvancedWhitelistR",
+    "version": "1.0.3",
+    "description": {
+      "en_us": "For outline-model Whitelist",
+      "zh_cn": "For outline-model Whitelist"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.1.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "just_kill_it",
+    "authors": [
+      {
+        "name": "alex3236",
+        "link": "https://github.com/alex3236"
+      }
+    ],
+    "repository_url": "https://github.com/alex3236/just_kill_it/tree/main",
+    "labels": [
+      "management"
+    ],
+    "name": "Just Kill It",
+    "version": "1.0.0",
+    "description": {
+      "en_us": "Kill the Minecraft server if it can't stop",
+      "zh_cn": "服务端关闭时间过长时杀死进程"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.13.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1679,58 +1651,7 @@
       "mcdreforged": ">=2.0.0-alpha.1",
       "player_ip_logger": ">=1.2.0"
     },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "join_motd_next",
-    "authors": [
-      {
-        "name": "JOZA_ORANGE",
-        "link": "https://github.com/JOZA-ORANGE"
-      }
-    ],
-    "repository_url": "https://github.com/JOZA-ORANGE/MCDR-joinMOTDnext/tree/master",
-    "labels": [
-      "information"
-    ],
-    "name": "join MOTD next",
-    "version": "0.2.1",
-    "description": {
-      "en_us": "Send more diverse information to players when they join the game",
-      "zh_cn": "在玩家加入游戏时向其发送更加多样的信息"
-    },
-    "dependencies": {
-      "daycount_nbt": ">=2.2.1"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "jrrp",
-    "authors": [
-      {
-        "name": "Huaji_MUR233",
-        "link": "https://github.com/HuajiMUR233"
-      }
-    ],
-    "repository_url": "https://github.com/HuajiMURsMC/jrrp/tree/master",
-    "labels": [
-      "tool"
-    ],
-    "name": "Jrrp",
-    "version": "3.0.0",
-    "description": {
-      "en_us": "《今日人品》",
-      "zh_cn": "《今日人品》"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.1.4",
-      "mc_uuid": ">=1.0.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1760,7 +1681,55 @@
       "mcdreforged": ">=2.10.0",
       "daycount_nbt": "^2.2.1"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "join_motd_next",
+    "authors": [
+      {
+        "name": "JOZA_ORANGE",
+        "link": "https://github.com/JOZA-ORANGE"
+      }
+    ],
+    "repository_url": "https://github.com/JOZA-ORANGE/MCDR-joinMOTDnext/tree/master",
+    "labels": [
+      "information"
+    ],
+    "name": "join MOTD next",
+    "version": "0.2.1",
+    "description": {
+      "en_us": "Send more diverse information to players when they join the game",
+      "zh_cn": "在玩家加入游戏时向其发送更加多样的信息"
+    },
+    "dependencies": {
+      "daycount_nbt": ">=2.2.1"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "join_motd",
+    "authors": [
+      {
+        "name": "Fallen_Breath",
+        "link": "https://github.com/Fallen-Breath"
+      }
+    ],
+    "repository_url": "https://github.com/TISUnion/joinMOTD/tree/master",
+    "labels": [
+      "information"
+    ],
+    "name": "Join MOTD",
+    "version": "1.3.0",
+    "description": {
+      "en_us": "Send player a MOTD when he joins",
+      "zh_cn": "当玩家加入游戏时向其发送欢迎信息"
+    },
+    "dependencies": null,
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1783,7 +1752,7 @@
       "zh_cn": "打通kook机器人与mc"
     },
     "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1809,7 +1778,33 @@
       "mcdreforged": ">=2.0.0",
       "apscheduler": ">=3.9.1"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "kpi",
+    "authors": [
+      {
+        "name": "zyxkad",
+        "link": "https://github.com/zyxkad"
+      }
+    ],
+    "repository_url": "https://github.com/kmcsr/kpi_mcdr/tree/master",
+    "labels": [
+      "api"
+    ],
+    "name": "KPI",
+    "version": "1.5.1",
+    "description": {
+      "en_us": "A MCDR plugins codes share library",
+      "zh_cn": "一个MCDR插件代码共享库"
+    },
+    "dependencies": {
+      "mcdreforged": "^2.14.0",
+      "python": "^3.11"
+    },
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1836,7 +1831,7 @@
       "online_player_api": "^1.0.0",
       "whitelist_api": "^1.2.0"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1866,58 +1861,7 @@
       "mcdreforged": ">=2.6.0",
       "minecraft_data_api": "*"
     },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "just_kill_it",
-    "authors": [
-      {
-        "name": "alex3236",
-        "link": "https://github.com/alex3236"
-      }
-    ],
-    "repository_url": "https://github.com/alex3236/just_kill_it/tree/main",
-    "labels": [
-      "management"
-    ],
-    "name": "Just Kill It",
-    "version": "1.0.0",
-    "description": {
-      "en_us": "Kill the Minecraft server if it can't stop",
-      "zh_cn": "服务端关闭时间过长时杀死进程"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.13.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "kpi",
-    "authors": [
-      {
-        "name": "zyxkad",
-        "link": "https://github.com/zyxkad"
-      }
-    ],
-    "repository_url": "https://github.com/kmcsr/kpi_mcdr/tree/master",
-    "labels": [
-      "api"
-    ],
-    "name": "KPI",
-    "version": "1.5.1",
-    "description": {
-      "en_us": "A MCDR plugins codes share library",
-      "zh_cn": "一个MCDR插件代码共享库"
-    },
-    "dependencies": {
-      "mcdreforged": "^2.14.0",
-      "python": "^3.11"
-    },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1942,32 +1886,7 @@
     "dependencies": {
       "mcdreforged": ">=2.13.0-alpha.1"
     },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "leader_reforged",
-    "authors": [
-      {
-        "name": "XavierWah",
-        "link": "https://github.com/XavierWah"
-      }
-    ],
-    "repository_url": "https://github.com/Minecraft-AMS/Leader-Reforged/tree/master",
-    "labels": [
-      "tool"
-    ],
-    "name": "Leader Reforged",
-    "version": "1.1.2",
-    "description": {
-      "en_us": "This is a simplified and reforged version for Leader, allowing to mark a leader.",
-      "zh_cn": "这个插件简化并实现了 Leader 的功能，使得可以指出一个玩家作为导游。"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.0.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -1992,7 +1911,7 @@
     "dependencies": {
       "mcdreforged": ">=2.13.0"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -2021,30 +1940,7 @@
     "dependencies": {
       "mcdreforged": ">=2.6.0"
     },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "let_me_click_and_send",
-    "authors": [
-      {
-        "name": "Andy Zhang",
-        "link": "https://github.com/AnzhiZhang"
-      }
-    ],
-    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/let_me_click_and_send",
-    "labels": [
-      "information"
-    ],
-    "name": "Let Me Click and Send",
-    "version": "1.0.0",
-    "description": {
-      "en_us": "Allowed click to send anything in 1.19",
-      "zh_cn": "允许在 1.19 点击发送任意信息"
-    },
-    "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -2069,33 +1965,30 @@
     "dependencies": {
       "mcdreforged": ">=2.1.0-beta"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "main_storage_searcher",
+    "id": "let_me_click_and_send",
     "authors": [
       {
-        "name": "tanh_Heng",
-        "link": "https://github.com/tanhHeng"
+        "name": "Andy Zhang",
+        "link": "https://github.com/AnzhiZhang"
       }
     ],
-    "repository_url": "https://github.com/LazyAlienServer/MainStorageSearcher/tree/main",
+    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/let_me_click_and_send",
     "labels": [
-      "tool"
+      "information"
     ],
-    "name": "MS-Searcher",
-    "version": "0.2.0",
+    "name": "Let Me Click and Send",
+    "version": "1.0.0",
     "description": {
-      "en_us": "Help you search specific item in main storage",
-      "zh_cn": "帮助你在全物品中寻找指定物品"
+      "en_us": "Allowed click to send anything in 1.19",
+      "zh_cn": "允许在 1.19 点击发送任意信息"
     },
-    "dependencies": {
-      "mcdreforged": ">=2.6.0",
-      "minecraft_data_api": "*"
-    },
-    "update_time": "2025-03-03 21:17:44",
+    "dependencies": null,
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -2125,7 +2018,7 @@
       "minecraft_data_api": "*",
       "mcdreforged": ">=2.0.0-beta.12"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -2153,30 +2046,59 @@
       "python": "^3.12",
       "kpi": "~1.5.1"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "mc_uuid",
+    "id": "jrrp",
     "authors": [
       {
         "name": "Huaji_MUR233",
         "link": "https://github.com/HuajiMUR233"
       }
     ],
-    "repository_url": "https://github.com/HuajiMUR233/MCUUID/tree/master",
+    "repository_url": "https://github.com/HuajiMURsMC/jrrp/tree/master",
     "labels": [
-      "api"
+      "tool"
     ],
-    "name": "Minecraft UUID API",
-    "version": "1.0.0",
+    "name": "Jrrp",
+    "version": "3.0.0",
     "description": {
-      "en_us": "Minecraft UUID API",
-      "zh_cn": "Minecraft UUID API"
+      "en_us": "《今日人品》",
+      "zh_cn": "《今日人品》"
     },
-    "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
+    "dependencies": {
+      "mcdreforged": ">=2.1.4",
+      "mc_uuid": ">=1.0.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "main_storage_searcher",
+    "authors": [
+      {
+        "name": "tanh_Heng",
+        "link": "https://github.com/tanhHeng"
+      }
+    ],
+    "repository_url": "https://github.com/LazyAlienServer/MainStorageSearcher/tree/main",
+    "labels": [
+      "tool"
+    ],
+    "name": "MS-Searcher",
+    "version": "0.2.0",
+    "description": {
+      "en_us": "Help you search specific item in main storage",
+      "zh_cn": "帮助你在全物品中寻找指定物品"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.6.0",
+      "minecraft_data_api": "*"
+    },
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -2202,40 +2124,7 @@
     "dependencies": {
       "mcdreforged": ">=2.14.0"
     },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "mcd_task",
-    "authors": [
-      {
-        "name": "Pandaria",
-        "link": "https://github.com/Pandaria98"
-      },
-      {
-        "name": "Fallen_Breath",
-        "link": "https://github.com/Fallen-Breath"
-      },
-      {
-        "name": "Ra1ny_Yuki",
-        "link": "https://github.com/Ra1ny-Yuki"
-      }
-    ],
-    "repository_url": "https://github.com/TISUnion/Task/tree/master",
-    "labels": [
-      "tool"
-    ],
-    "name": "Task",
-    "version": "2.3.6-dev+build.68",
-    "description": {
-      "en_us": "A plugin to show tasks of project in progress",
-      "zh_cn": "用于展示进行中的工程任务的插件"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.1.3"
-    },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -2268,80 +2157,63 @@
     "dependencies": {
       "mcdreforged": ">=2.1.0"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "mcdr_announcements",
+    "id": "mcd_task",
     "authors": [
       {
-        "name": "dodo939",
-        "link": "https://github.com/yfy-dodo939"
-      }
-    ],
-    "repository_url": "https://github.com/yfy-dodo939/mcdr_announcements/tree/main/latest",
-    "labels": [
-      "information"
-    ],
-    "name": "Announcements",
-    "version": "1.3.0",
-    "description": {
-      "en_us": "A plugin running on MCDR to send announcements on time.",
-      "zh_cn": "A plugin running on MCDR to send announcements on time."
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.6.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "mcdreforged_plugin_manager",
-    "authors": [
-      {
-        "name": "Ivan1F",
-        "link": "https://github.com/Ivan-1F"
-      }
-    ],
-    "repository_url": "https://github.com/Ivan-1F/MCDReforgedPluginManager/tree/master",
-    "labels": [
-      "management"
-    ],
-    "name": "MCDReforged Plugin Manager",
-    "version": "2.2.0",
-    "description": {
-      "en_us": "Manage your mcdreforged plugins with ease",
-      "zh_cn": "轻松管理你的 MCDReforged 插件"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.0.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "mcdr_pycraft_bot",
-    "authors": [
+        "name": "Pandaria",
+        "link": "https://github.com/Pandaria98"
+      },
       {
         "name": "Fallen_Breath",
         "link": "https://github.com/Fallen-Breath"
+      },
+      {
+        "name": "Ra1ny_Yuki",
+        "link": "https://github.com/Ra1ny-Yuki"
       }
     ],
-    "repository_url": "https://github.com/TISUnion/MCDR-bot/tree/master",
+    "repository_url": "https://github.com/TISUnion/Task/tree/master",
     "labels": [
       "tool"
     ],
-    "name": "MCDR Bot",
-    "version": "1.2.0",
+    "name": "Task",
+    "version": "2.3.6-dev+build.68",
     "description": {
-      "en_us": "MCDR Bot powered by pyCraft",
-      "zh_cn": "使用 pycraft 的假人插件"
+      "en_us": "A plugin to show tasks of project in progress",
+      "zh_cn": "用于展示进行中的工程任务的插件"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.1.3"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "mc_uuid",
+    "authors": [
+      {
+        "name": "Huaji_MUR233",
+        "link": "https://github.com/HuajiMUR233"
+      }
+    ],
+    "repository_url": "https://github.com/HuajiMUR233/MCUUID/tree/master",
+    "labels": [
+      "api"
+    ],
+    "name": "Minecraft UUID API",
+    "version": "1.0.0",
+    "description": {
+      "en_us": "Minecraft UUID API",
+      "zh_cn": "Minecraft UUID API"
     },
     "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -2367,32 +2239,55 @@
       "mcdreforged": ">=2.0.1",
       "minecraft_data_api": "*"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "mg_events",
+    "id": "mcdr_pycraft_bot",
     "authors": [
       {
-        "name": "Mooling0602",
-        "link": "https://github.com/Mooling0602"
+        "name": "Fallen_Breath",
+        "link": "https://github.com/Fallen-Breath"
       }
     ],
-    "repository_url": "https://github.com/Mooling0602/MoreGameEvents-MCDR/tree/main",
+    "repository_url": "https://github.com/TISUnion/MCDR-bot/tree/master",
     "labels": [
-      "api"
+      "tool"
     ],
-    "name": "MoreGameEvents",
-    "version": "0.3.1",
+    "name": "MCDR Bot",
+    "version": "1.2.0",
     "description": {
-      "en_us": "Add more game events to MCDR.",
-      "zh_cn": "向MCDR添加更多的游戏事件！"
+      "en_us": "MCDR Bot powered by pyCraft",
+      "zh_cn": "使用 pycraft 的假人插件"
+    },
+    "dependencies": null,
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "mcdreforged_plugin_manager",
+    "authors": [
+      {
+        "name": "Ivan1F",
+        "link": "https://github.com/Ivan-1F"
+      }
+    ],
+    "repository_url": "https://github.com/Ivan-1F/MCDReforgedPluginManager/tree/master",
+    "labels": [
+      "management"
+    ],
+    "name": "MCDReforged Plugin Manager",
+    "version": "2.2.0",
+    "description": {
+      "en_us": "Manage your mcdreforged plugins with ease",
+      "zh_cn": "轻松管理你的 MCDReforged 插件"
     },
     "dependencies": {
-      "mcdreforged": ">=2.1.0"
+      "mcdreforged": ">=2.0.0"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -2418,7 +2313,57 @@
     "dependencies": {
       "mcdreforged": ">=2.0.0-alpha.1"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": "1.0.0",
+    "last_update_time": "2025-02-10 05:29:12.000"
+  },
+  {
+    "id": "mg_events",
+    "authors": [
+      {
+        "name": "Mooling0602",
+        "link": "https://github.com/Mooling0602"
+      }
+    ],
+    "repository_url": "https://github.com/Mooling0602/MoreGameEvents-MCDR/tree/main",
+    "labels": [
+      "api"
+    ],
+    "name": "MoreGameEvents",
+    "version": "0.3.1",
+    "description": {
+      "en_us": "Add more game events to MCDR.",
+      "zh_cn": "向MCDR添加更多的游戏事件！"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.1.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "minecraft_data_api",
+    "authors": [
+      {
+        "name": "Fallen_Breath",
+        "link": "https://github.com/Fallen-Breath"
+      }
+    ],
+    "repository_url": "https://github.com/Fallen-Breath/MinecraftDataAPI//tree/next",
+    "labels": [
+      "api"
+    ],
+    "name": "Minecraft Data API",
+    "version": "1.5.0",
+    "description": {
+      "en_us": "A MCDReforged api plugin to get player data information and more",
+      "zh_cn": "一个用获得玩家信息等数据的的 API"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.0.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -2447,32 +2392,7 @@
     "dependencies": {
       "mcdreforged": "2.14.5"
     },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "minecraft_data_api",
-    "authors": [
-      {
-        "name": "Fallen_Breath",
-        "link": "https://github.com/Fallen-Breath"
-      }
-    ],
-    "repository_url": "https://github.com/Fallen-Breath/MinecraftDataAPI//tree/next",
-    "labels": [
-      "api"
-    ],
-    "name": "Minecraft Data API",
-    "version": "1.5.0",
-    "description": {
-      "en_us": "A MCDReforged api plugin to get player data information and more",
-      "zh_cn": "一个用获得玩家信息等数据的的 API"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.0.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -2497,57 +2417,7 @@
     "dependencies": {
       "mcdreforged": ">=2.0.0"
     },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "mirror_control",
-    "authors": [
-      {
-        "name": "Chara_SS",
-        "link": "https://github.com/charassss/"
-      }
-    ],
-    "repository_url": "https://github.com/charassss/Mirror-Control//tree/master",
-    "labels": [
-      "management"
-    ],
-    "name": "Mirror Control",
-    "version": "1.0.4",
-    "description": {
-      "en_us": "A plugin to control mirror server",
-      "zh_cn": "一个控制镜像服务器的插件"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.13.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "mirror_mcsmcdr",
-    "authors": [
-      {
-        "name": "tanh_Heng",
-        "link": "https://github.com/tanhHeng"
-      }
-    ],
-    "repository_url": "https://github.com/LazyAlienServer/MirrorMcsmcdR/tree/main",
-    "labels": [
-      "management"
-    ],
-    "name": "MirrorMcsmcdR",
-    "version": "1.3.6",
-    "description": {
-      "en_us": "A mirror server manager MCDR plugin, based on MCSManager.",
-      "zh_cn": "一个多功能的完善的控制镜像服的MCDR插件"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.6.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -2573,7 +2443,107 @@
       "mcdreforged": ">=2.12.0",
       "prime_backup": ">=1.7.4"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "mirror_control",
+    "authors": [
+      {
+        "name": "Chara_SS",
+        "link": "https://github.com/charassss/"
+      }
+    ],
+    "repository_url": "https://github.com/charassss/Mirror-Control//tree/master",
+    "labels": [
+      "management"
+    ],
+    "name": "Mirror Control",
+    "version": "1.0.4",
+    "description": {
+      "en_us": "A plugin to control mirror server",
+      "zh_cn": "一个控制镜像服务器的插件"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.13.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "mirror_mcsmcdr",
+    "authors": [
+      {
+        "name": "tanh_Heng",
+        "link": "https://github.com/tanhHeng"
+      }
+    ],
+    "repository_url": "https://github.com/LazyAlienServer/MirrorMcsmcdR/tree/main",
+    "labels": [
+      "management"
+    ],
+    "name": "MirrorMcsmcdR",
+    "version": "1.3.6",
+    "description": {
+      "en_us": "A mirror server manager MCDR plugin, based on MCSManager.",
+      "zh_cn": "一个多功能的完善的控制镜像服的MCDR插件"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.6.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "mirror_sync_reforged",
+    "authors": [
+      {
+        "name": "Ivan1F",
+        "link": "https://github.com/Ivan-1F"
+      }
+    ],
+    "repository_url": "https://github.com/Ivan-1F/MirrorSyncReforged/tree/master",
+    "labels": [
+      "management"
+    ],
+    "name": "Mirror Sync Reforged",
+    "version": "1.3.0",
+    "description": {
+      "en_us": "A plugin to sync survival server world to the mirror server",
+      "zh_cn": "一个用于同步生存服存档至镜像服的插件"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.0.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "mirror_server_reforged",
+    "authors": [
+      {
+        "name": "GamerNoTitle",
+        "link": "https://github.com/GamerNoTitle"
+      }
+    ],
+    "repository_url": "https://github.com/EMUnion/MirrorServerReforged/tree/master",
+    "labels": [
+      "management"
+    ],
+    "name": "MirrorServerReforged",
+    "version": "1.0.8-alpha",
+    "description": {
+      "en_us": "A reforged version of [MCDR-Mirror-Server](https://github.com/GamerNoTitle/MCDR-Mirror-Server), which is a plugin for MCDR-Reforged 2.6.0+.",
+      "zh_cn": "[MCDR-Mirror-Server](https://github.com/GamerNoTitle/MCDR-Mirror-Server)的重置版，适用于MCDR 2.6.0+的镜像服插件"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.6.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -2600,183 +2570,7 @@
       "zh_cn": "一个简单的MCDR插件，用于同步Minecraft地图文件"
     },
     "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "mirror_server_reforged",
-    "authors": [
-      {
-        "name": "GamerNoTitle",
-        "link": "https://github.com/GamerNoTitle"
-      }
-    ],
-    "repository_url": "https://github.com/EMUnion/MirrorServerReforged/tree/master",
-    "labels": [
-      "management"
-    ],
-    "name": "MirrorServerReforged",
-    "version": "1.0.8-alpha",
-    "description": {
-      "en_us": "A reforged version of [MCDR-Mirror-Server](https://github.com/GamerNoTitle/MCDR-Mirror-Server), which is a plugin for MCDR-Reforged 2.6.0+.",
-      "zh_cn": "[MCDR-Mirror-Server](https://github.com/GamerNoTitle/MCDR-Mirror-Server)的重置版，适用于MCDR 2.6.0+的镜像服插件"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.6.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "mirror_sync_reforged",
-    "authors": [
-      {
-        "name": "Ivan1F",
-        "link": "https://github.com/Ivan-1F"
-      }
-    ],
-    "repository_url": "https://github.com/Ivan-1F/MirrorSyncReforged/tree/master",
-    "labels": [
-      "management"
-    ],
-    "name": "Mirror Sync Reforged",
-    "version": "1.3.0",
-    "description": {
-      "en_us": "A plugin to sync survival server world to the mirror server",
-      "zh_cn": "一个用于同步生存服存档至镜像服的插件"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.0.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "multi_rcon_api",
-    "authors": [
-      {
-        "name": "YehowahLiu",
-        "link": "https://github.com/YehowahLiu"
-      }
-    ],
-    "repository_url": "https://github.com/FAS-Server/MultiRconAPI/tree/main",
-    "labels": [
-      "tool",
-      "api"
-    ],
-    "name": "MultiRconAPI",
-    "version": "2.0.1",
-    "description": {
-      "en_us": "An api to make it easier to control group server by rcon.",
-      "zh_cn": "一个使用rcon来做到对群组服进行简单操作的api"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.1.2"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "multi_whitelist",
-    "authors": [
-      {
-        "name": "Ricky",
-        "link": "https://github.com/R1ckyH"
-      }
-    ],
-    "repository_url": "https://github.com/R1ckyH/multi_whitelist/tree/master",
-    "labels": [
-      "management"
-    ],
-    "name": "multi_whitelist",
-    "version": "3.0.0",
-    "description": {
-      "en_us": "A plugin can control whitelist with multi servers.",
-      "zh_cn": "基于minecraft的白名单功能。"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.0.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "mount",
-    "authors": [
-      {
-        "name": "YehowahLiu",
-        "link": "https://github.com/YehowahLiu"
-      }
-    ],
-    "repository_url": "https://github.com/FAS-Server/Mount/tree/main",
-    "labels": [
-      "management"
-    ],
-    "name": "Mount",
-    "version": "0.3.1",
-    "description": {
-      "en_us": "Mount different minecraft server into a mcdr server, with overwritten properties!",
-      "zh_cn": "将不同的MC服务器挂载进入一个mcdr服务器, 同时能够重写服务器配置!"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.7.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "mutils",
-    "authors": [
-      {
-        "name": "Mooling0602",
-        "link": "https://github.com/Mooling0602"
-      }
-    ],
-    "repository_url": "https://github.com/Mooling0602/MoolingUtils-MCDR/tree/main",
-    "labels": [
-      "api"
-    ],
-    "name": "MoolingUtils",
-    "version": "0.0.3",
-    "description": {
-      "en_us": "Mooling0602's MCDR plugin dev libs.",
-      "zh_cn": "木泠的MCDR插件开发库。"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.1.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "offline_whitelist",
-    "authors": [
-      {
-        "name": "skuzow",
-        "link": "https://github.com/skuzow"
-      }
-    ],
-    "repository_url": "https://github.com/skuzow/offline-whitelist/tree/master",
-    "labels": [
-      "management"
-    ],
-    "name": "OfflineWhitelist",
-    "version": "0.1.4",
-    "description": {
-      "en_us": "Offline whitelist helper",
-      "zh_cn": "Offline whitelist helper"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.0.0"
-    },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -2801,7 +2595,112 @@
     "dependencies": {
       "mcdreforged": "^2.5"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "hibernate_r",
+    "authors": [
+      {
+        "name": "HIM049",
+        "link": "https://github.com/HIM049"
+      },
+      {
+        "name": "sout_Nantang",
+        "link": "https://github.com/sout233"
+      }
+    ],
+    "repository_url": "https://github.com/HIM049/MCDR_HibernateR/tree/master",
+    "labels": [
+      "management"
+    ],
+    "name": "HibernateR",
+    "version": "1.2.3",
+    "description": {
+      "en_us": "A MCDReforged plugin. When there are no player in the server, the plugin can make it shutdown. And if someone want to visit the server, the plugin can make the server start again.",
+      "zh_cn": "一个MCDReforged插件，可以根据服务器内玩家情况自动开启或关闭服务器"
+    },
+    "dependencies": {
+      "online_player_api": "*",
+      "mcdreforged": ">=2.0.0-beta.3"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": "1.2.3",
+    "last_update_time": "2025-02-20 15:56:27.000"
+  },
+  {
+    "id": "offline_whitelist",
+    "authors": [
+      {
+        "name": "skuzow",
+        "link": "https://github.com/skuzow"
+      }
+    ],
+    "repository_url": "https://github.com/skuzow/offline-whitelist/tree/master",
+    "labels": [
+      "management"
+    ],
+    "name": "OfflineWhitelist",
+    "version": "0.1.4",
+    "description": {
+      "en_us": "Offline whitelist helper",
+      "zh_cn": "Offline whitelist helper"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.0.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "mount",
+    "authors": [
+      {
+        "name": "YehowahLiu",
+        "link": "https://github.com/YehowahLiu"
+      }
+    ],
+    "repository_url": "https://github.com/FAS-Server/Mount/tree/main",
+    "labels": [
+      "management"
+    ],
+    "name": "Mount",
+    "version": "0.3.1",
+    "description": {
+      "en_us": "Mount different minecraft server into a mcdr server, with overwritten properties!",
+      "zh_cn": "将不同的MC服务器挂载进入一个mcdr服务器, 同时能够重写服务器配置!"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.7.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "multi_whitelist",
+    "authors": [
+      {
+        "name": "Ricky",
+        "link": "https://github.com/R1ckyH"
+      }
+    ],
+    "repository_url": "https://github.com/R1ckyH/multi_whitelist/tree/master",
+    "labels": [
+      "management"
+    ],
+    "name": "multi_whitelist",
+    "version": "3.0.0",
+    "description": {
+      "en_us": "A plugin can control whitelist with multi servers.",
+      "zh_cn": "基于minecraft的白名单功能。"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.0.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -2827,82 +2726,58 @@
       "mcdreforged": "^2.6.0",
       "whitelist_api": "^1.3.0"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "onebot_api",
+    "id": "mutils",
     "authors": [
       {
-        "name": "Huaji_MUR233",
-        "link": "https://github.com/HuajiMUR233"
+        "name": "Mooling0602",
+        "link": "https://github.com/Mooling0602"
       }
     ],
-    "repository_url": "https://github.com/HuajiMUR233/OneBotAPI/tree/master",
+    "repository_url": "https://github.com/Mooling0602/MoolingUtils-MCDR/tree/main",
     "labels": [
       "api"
     ],
-    "name": "OneBot API",
-    "version": "1.1.1",
-    "description": {
-      "en_us": "OneBot in MCDReforged",
-      "zh_cn": "OneBot in MCDReforged"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.0.4"
-    },
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "online_player_api",
-    "authors": [
-      {
-        "name": "Andy Zhang",
-        "link": "https://github.com/AnzhiZhang"
-      }
-    ],
-    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/online_player_api",
-    "labels": [
-      "api"
-    ],
-    "name": "OnlinePlayerAPI",
-    "version": "1.0.0",
-    "description": {
-      "en_us": "Online Player API",
-      "zh_cn": "在线玩家 API"
-    },
-    "dependencies": null,
-    "update_time": "2025-03-03 21:17:44",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "packet_parser",
-    "authors": [
-      {
-        "name": "zyxkad",
-        "link": "https://github.com/zyxkad"
-      }
-    ],
-    "repository_url": "https://github.com/kmcsr/packet_parser_mcdr/tree/master",
-    "labels": [
-      "api"
-    ],
-    "name": "PacketParser",
+    "name": "MoolingUtils",
     "version": "0.0.3",
     "description": {
-      "en_us": "A packet parser help to parse Minecraft Java Edition",
-      "zh_cn": "辅助解析 Minecraft JE 数据包"
+      "en_us": "Mooling0602's MCDR plugin dev libs.",
+      "zh_cn": "木泠的MCDR插件开发库。"
     },
     "dependencies": {
-      "mcdreforged": "^2.3.0",
-      "kpi": "~1.5.1",
-      "loginproxy": "^0.8.0"
+      "mcdreforged": ">=2.1.0"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": "0.0.2",
+    "last_update_time": "2025-02-09 08:17:47.000"
+  },
+  {
+    "id": "multi_rcon_api",
+    "authors": [
+      {
+        "name": "YehowahLiu",
+        "link": "https://github.com/YehowahLiu"
+      }
+    ],
+    "repository_url": "https://github.com/FAS-Server/MultiRconAPI/tree/main",
+    "labels": [
+      "tool",
+      "api"
+    ],
+    "name": "MultiRconAPI",
+    "version": "2.0.1",
+    "description": {
+      "en_us": "An api to make it easier to control group server by rcon.",
+      "zh_cn": "一个使用rcon来做到对群组服进行简单操作的api"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.1.2"
+    },
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -2936,7 +2811,84 @@
       "mcdreforged": ">=2.1.3",
       "multi_rcon_api": ">=1.0.0"
     },
-    "update_time": "2025-03-03 21:17:44",
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "mcdr_announcements",
+    "authors": [
+      {
+        "name": "dodo939",
+        "link": "https://github.com/yfy-dodo939"
+      }
+    ],
+    "repository_url": "https://github.com/yfy-dodo939/mcdr_announcements/tree/main/latest",
+    "labels": [
+      "information"
+    ],
+    "name": "Announcements",
+    "version": "1.3.0",
+    "description": {
+      "en_us": "A plugin running on MCDR to send announcements on time.",
+      "zh_cn": "A plugin running on MCDR to send announcements on time."
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.6.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "onebot_api",
+    "authors": [
+      {
+        "name": "Huaji_MUR233",
+        "link": "https://github.com/HuajiMUR233"
+      }
+    ],
+    "repository_url": "https://github.com/HuajiMUR233/OneBotAPI/tree/master",
+    "labels": [
+      "api"
+    ],
+    "name": "OneBot API",
+    "version": "1.1.1",
+    "description": {
+      "en_us": "OneBot in MCDReforged",
+      "zh_cn": "OneBot in MCDReforged"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.0.4"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "packet_parser",
+    "authors": [
+      {
+        "name": "zyxkad",
+        "link": "https://github.com/zyxkad"
+      }
+    ],
+    "repository_url": "https://github.com/kmcsr/packet_parser_mcdr/tree/master",
+    "labels": [
+      "api"
+    ],
+    "name": "PacketParser",
+    "version": "0.0.3",
+    "description": {
+      "en_us": "A packet parser help to parse Minecraft Java Edition",
+      "zh_cn": "辅助解析 Minecraft JE 数据包"
+    },
+    "dependencies": {
+      "mcdreforged": "^2.3.0",
+      "kpi": "~1.5.1",
+      "loginproxy": "^0.8.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -2964,32 +2916,7 @@
       "loginproxy": "~0.8.7",
       "packet_parser": "~0.0.3"
     },
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "permanent_backup",
-    "authors": [
-      {
-        "name": "Fallen_Breath",
-        "link": "https://github.com/Fallen-Breath"
-      }
-    ],
-    "repository_url": "https://github.com/TISUnion/PermanentBackup/tree/master",
-    "labels": [
-      "management"
-    ],
-    "name": "Permanent Backup",
-    "version": "1.0.3",
-    "description": {
-      "en_us": "A plugin for creating permanent zip world backups",
-      "zh_cn": "创建永久的用 zip 压缩的备份"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.0.0-"
-    },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -3012,59 +2939,31 @@
       "zh_cn": "基于PyCraft的Replay客户端"
     },
     "dependencies": null,
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "player_last_play",
+    "id": "mcdr_plugin_panel",
     "authors": [
       {
-        "name": "Aimerny",
-        "link": "https://github.com/Aimerny"
+        "name": "ZeroKelvin",
+        "link": "https://github.com/BelowZeroKelvin"
       }
     ],
-    "repository_url": "https://github.com/Aimerny/MCDRPlugins/tree/main/src/player_last_play",
-    "labels": [
-      "information"
-    ],
-    "name": "PlayerLastPlay",
-    "version": "1.2.1",
-    "description": {
-      "en_us": "Record player lastime left the server",
-      "zh_cn": "记录与查询玩家最近游玩时间,方便检查服务器玩家活跃度"
-    },
-    "dependencies": {
-      "online_player_api": "^1.0.0"
-    },
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "player_manager",
-    "authors": [
-      {
-        "name": "hail122",
-        "link": "https://github.com/linstar-fxt"
-      }
-    ],
-    "repository_url": "https://github.com/PRcT-Server/MCDRPlugins/tree/master/PlayerManager",
+    "repository_url": "https://github.com/BelowZeroKelvin/MCDRPluginPanel/tree/master/plugin",
     "labels": [
       "tool",
-      "management"
+      "api"
     ],
-    "name": "Player Manager",
-    "version": "1.2.1",
+    "name": null,
+    "version": null,
     "description": {
-      "en_us": "A MCDReforged plugin to help with managing fake players",
-      "zh_cn": "帮助你管理假人"
+      "en_us": "",
+      "zh_cn": ""
     },
-    "dependencies": {
-      "mcdreforged": ">=2.0.0-beta.3",
-      "minecraft_data_api": "*"
-    },
-    "update_time": "2025-03-03 21:17:45",
+    "dependencies": null,
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -3091,7 +2990,84 @@
       "zh_cn": "记录玩家IP地址"
     },
     "dependencies": {},
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "prime_backup",
+    "authors": [
+      {
+        "name": "Fallen_Breath",
+        "link": "https://github.com/Fallen-Breath"
+      }
+    ],
+    "repository_url": "https://github.com/TISUnion/PrimeBackup/tree/master",
+    "labels": [
+      "management"
+    ],
+    "name": "Prime Backup",
+    "version": "1.8.3",
+    "description": {
+      "en_us": "A powerful backup plugin for MCDR, an advanced backup solution for your Minecraft world",
+      "zh_cn": "一个强大的MCDR备份插件，一套先进的Minecraft存档备份解决方案"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.12.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "player_last_play",
+    "authors": [
+      {
+        "name": "Aimerny",
+        "link": "https://github.com/Aimerny"
+      }
+    ],
+    "repository_url": "https://github.com/Aimerny/MCDRPlugins/tree/main/src/player_last_play",
+    "labels": [
+      "information"
+    ],
+    "name": "PlayerLastPlay",
+    "version": "1.2.1",
+    "description": {
+      "en_us": "Record player lastime left the server",
+      "zh_cn": "记录与查询玩家最近游玩时间,方便检查服务器玩家活跃度"
+    },
+    "dependencies": {
+      "online_player_api": "^1.0.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "player_manager",
+    "authors": [
+      {
+        "name": "hail122",
+        "link": "https://github.com/linstar-fxt"
+      }
+    ],
+    "repository_url": "https://github.com/PRcT-Server/MCDRPlugins/tree/master/PlayerManager",
+    "labels": [
+      "tool",
+      "management"
+    ],
+    "name": "Player Manager",
+    "version": "1.2.1",
+    "description": {
+      "en_us": "A MCDReforged plugin to help with managing fake players",
+      "zh_cn": "帮助你管理假人"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.0.0-beta.3",
+      "minecraft_data_api": "*"
+    },
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -3119,7 +3095,7 @@
       "zh_cn": "一个基于 Nonebot2 的 Minecraft 服务器 QQ 机器人，支持多服使用"
     },
     "dependencies": null,
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -3142,56 +3118,57 @@
       "zh_cn": "连接 MC 与 QQ"
     },
     "dependencies": null,
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "prime_backup",
+    "id": "quick_backup_multi",
     "authors": [
       {
         "name": "Fallen_Breath",
         "link": "https://github.com/Fallen-Breath"
       }
     ],
-    "repository_url": "https://github.com/TISUnion/PrimeBackup/tree/master",
+    "repository_url": "https://github.com/TISUnion/QuickBackupM/tree/master",
     "labels": [
       "management"
     ],
-    "name": "Prime Backup",
-    "version": "1.8.3",
+    "name": "Quick Backup Multi",
+    "version": "1.10.1",
     "description": {
-      "en_us": "A powerful backup plugin for MCDR, an advanced backup solution for your Minecraft world",
-      "zh_cn": "一个强大的MCDR备份插件，一套先进的Minecraft存档备份解决方案"
+      "en_us": "A backup / restore plugin, with multiple backup slot",
+      "zh_cn": "多槽位备份/回档插件"
     },
     "dependencies": {
-      "mcdreforged": ">=2.12.0"
+      "mcdreforged": ">=2.1.2"
     },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "mcdr_plugin_panel",
+    "id": "quick_run_cmd",
     "authors": [
       {
-        "name": "ZeroKelvin",
-        "link": "https://github.com/BelowZeroKelvin"
+        "name": "Ricky",
+        "link": "https://github.com/R1ckyH"
       }
     ],
-    "repository_url": "https://github.com/BelowZeroKelvin/MCDRPluginPanel/tree/master/plugin",
+    "repository_url": "https://github.com/R1ckyH/quick_run_cmd/tree/master",
     "labels": [
-      "tool",
-      "api"
+      "tool"
     ],
-    "name": null,
-    "version": null,
+    "name": "quick_run_cmd",
+    "version": "2.0.0",
     "description": {
-      "en_us": "",
-      "zh_cn": ""
+      "en_us": "A plugin for run command quickly.",
+      "zh_cn": "一个快速运行自定义脚本的插件。"
     },
-    "dependencies": null,
-    "update_time": "2025-03-03 21:17:45",
+    "dependencies": {
+      "mcdreforged": ">=2.0.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -3222,34 +3199,9 @@
       "im_api": "^0.0.1",
       "online_player_api": "^1.0.0"
     },
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "quick_run_cmd",
-    "authors": [
-      {
-        "name": "Ricky",
-        "link": "https://github.com/R1ckyH"
-      }
-    ],
-    "repository_url": "https://github.com/R1ckyH/quick_run_cmd/tree/master",
-    "labels": [
-      "tool"
-    ],
-    "name": "quick_run_cmd",
-    "version": "2.0.0",
-    "description": {
-      "en_us": "A plugin for run command quickly.",
-      "zh_cn": "一个快速运行自定义脚本的插件。"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.0.0"
-    },
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": "3.0.2",
+    "last_update_time": "2025-02-20 07:22:12.000"
   },
   {
     "id": "quizgate",
@@ -3270,30 +3222,7 @@
       "zh_cn": "一个简单的白名单申请问卷系统，帮助新玩家在加入社区前了解服务器规则和游戏机制。"
     },
     "dependencies": null,
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "region_file_manager",
-    "authors": [
-      {
-        "name": "judamar",
-        "link": "https://github.com/judamar"
-      }
-    ],
-    "repository_url": "https://github.com/judamar/RegionFileManager/tree/master",
-    "labels": [
-      "management"
-    ],
-    "name": "RegionFileManager",
-    "version": "1.1.0",
-    "description": {
-      "en_us": "Plugin to magement of region files in the world.",
-      "zh_cn": "Plugin to magement of region files in the world."
-    },
-    "dependencies": {},
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -3318,57 +3247,55 @@
     "dependencies": {
       "mcdreforged": ">=2.7.0"
     },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": "1.9.3",
+    "last_update_time": "2025-03-03 08:55:05.000"
+  },
+  {
+    "id": "region_file_manager",
+    "authors": [
+      {
+        "name": "judamar",
+        "link": "https://github.com/judamar"
+      }
+    ],
+    "repository_url": "https://github.com/judamar/RegionFileManager/tree/master",
+    "labels": [
+      "management"
+    ],
+    "name": "RegionFileManager",
+    "version": "1.1.0",
+    "description": {
+      "en_us": "Plugin to magement of region files in the world.",
+      "zh_cn": "Plugin to magement of region files in the world."
+    },
+    "dependencies": {},
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "quick_backup_multi",
+    "id": "permanent_backup",
     "authors": [
       {
         "name": "Fallen_Breath",
         "link": "https://github.com/Fallen-Breath"
       }
     ],
-    "repository_url": "https://github.com/TISUnion/QuickBackupM/tree/master",
+    "repository_url": "https://github.com/TISUnion/PermanentBackup/tree/master",
     "labels": [
       "management"
     ],
-    "name": "Quick Backup Multi",
-    "version": "1.10.1",
+    "name": "Permanent Backup",
+    "version": "1.0.3",
     "description": {
-      "en_us": "A backup / restore plugin, with multiple backup slot",
-      "zh_cn": "多槽位备份/回档插件"
+      "en_us": "A plugin for creating permanent zip world backups",
+      "zh_cn": "创建永久的用 zip 压缩的备份"
     },
     "dependencies": {
-      "mcdreforged": ">=2.1.2"
+      "mcdreforged": ">=2.0.0-"
     },
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "region_file_updater",
-    "authors": [
-      {
-        "name": "Fallen_Breath",
-        "link": "https://github.com/Fallen-Breath"
-      }
-    ],
-    "repository_url": "https://github.com/TISUnion/RegionFileUpdater/tree/master",
-    "labels": [
-      "management"
-    ],
-    "name": "Region file Updater",
-    "version": "1.5.2",
-    "description": {
-      "en_us": "A MCDR plugin to help you update region files in game",
-      "zh_cn": "一个从指定位置拉取region文件至本服存档的插件"
-    },
-    "dependencies": {
-      "minecraft_data_api": "*"
-    },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -3393,7 +3320,7 @@
     "dependencies": {
       "mcdreforged": ">=2.12.0"
     },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -3419,80 +3346,7 @@
       "mcdreforged": ">=2.0.0-alpha.1",
       "minecraft_data_api": "*"
     },
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "requirements",
-    "authors": [
-      {
-        "name": "awaBlack",
-        "link": "https://github.com/Hi-awaBlack"
-      }
-    ],
-    "repository_url": "https://github.com/Hi-awaBlack/Requirements-MCDR/tree/main",
-    "labels": [
-      "api"
-    ],
-    "name": "Requirements",
-    "version": "1.1.0-beta.1",
-    "description": {
-      "en_us": "Auto install dependencies.",
-      "zh_cn": "Auto install dependencies."
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.0.0-alpha.1"
-    },
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "run_some_commands",
-    "authors": [
-      {
-        "name": "FlyingShuriken",
-        "link": "https://github.com/FlyingShuriken"
-      }
-    ],
-    "repository_url": "https://github.com/FlyingShuriken/MCDR-plugins/tree/main",
-    "labels": [
-      "tool"
-    ],
-    "name": "Run Some Commands",
-    "version": "1.0.0",
-    "description": {
-      "en_us": "Let player run whitelisted vanilla command",
-      "zh_cn": "讓普通玩家執行已被加入白名單的原版指令"
-    },
-    "dependencies": null,
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "seed",
-    "authors": [
-      {
-        "name": "OptiJava",
-        "link": "https://github.com/OptiJava"
-      }
-    ],
-    "repository_url": "https://github.com/OptiJava/Seed/tree/master",
-    "labels": [
-      "information"
-    ],
-    "name": "Seed",
-    "version": "1.2.0",
-    "description": {
-      "en_us": "Get world seed without op permission.",
-      "zh_cn": "在没有op权限的情况下获取种子"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.5.0"
-    },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -3517,30 +3371,82 @@
     "dependencies": {
       "mcdreforged": ">=2.6.0"
     },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "signal_container",
+    "id": "requirements",
     "authors": [
       {
-        "name": "Ra1ny_Yuki",
-        "link": "https://github.com/Ra1ny-Yuki"
+        "name": "awaBlack",
+        "link": "https://github.com/Hi-awaBlack"
       }
     ],
-    "repository_url": "https://github.com/Lazy-Bing-Server/SignalContainer-MCDR/tree/master",
+    "repository_url": "https://github.com/Hi-awaBlack/Requirements-MCDR/tree/main",
     "labels": [
-      "tool"
+      "api"
     ],
-    "name": "Signal Container",
-    "version": "1.0.1",
+    "name": "Requirements",
+    "version": "1.1.0-beta.1",
     "description": {
-      "en_us": "Obtain container that could output specified container",
-      "zh_cn": "Obtain container that could output specified container"
+      "en_us": "Auto install dependencies.",
+      "zh_cn": "Auto install dependencies."
     },
-    "dependencies": {},
-    "update_time": "2025-03-03 21:17:45",
+    "dependencies": {
+      "mcdreforged": ">=2.0.0-alpha.1"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "region_file_updater",
+    "authors": [
+      {
+        "name": "Fallen_Breath",
+        "link": "https://github.com/Fallen-Breath"
+      }
+    ],
+    "repository_url": "https://github.com/TISUnion/RegionFileUpdater/tree/master",
+    "labels": [
+      "management"
+    ],
+    "name": "Region file Updater",
+    "version": "1.5.2",
+    "description": {
+      "en_us": "A MCDR plugin to help you update region files in game",
+      "zh_cn": "一个从指定位置拉取region文件至本服存档的插件"
+    },
+    "dependencies": {
+      "minecraft_data_api": "*"
+    },
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "seed",
+    "authors": [
+      {
+        "name": "OptiJava",
+        "link": "https://github.com/OptiJava"
+      }
+    ],
+    "repository_url": "https://github.com/OptiJava/Seed/tree/master",
+    "labels": [
+      "information"
+    ],
+    "name": "Seed",
+    "version": "1.2.0",
+    "description": {
+      "en_us": "Get world seed without op permission.",
+      "zh_cn": "在没有op权限的情况下获取种子"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.5.0"
+    },
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -3565,7 +3471,7 @@
     "dependencies": {
       "mcdreforged": ">=2.13"
     },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -3590,32 +3496,55 @@
     "dependencies": {
       "mcdreforged": ">=2.1.0"
     },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "simple_calculator",
+    "id": "signal_container",
     "authors": [
       {
-        "name": "Fallen_Breath",
-        "link": "https://github.com/Fallen-Breath"
+        "name": "Ra1ny_Yuki",
+        "link": "https://github.com/Ra1ny-Yuki"
       }
     ],
-    "repository_url": "https://github.com/TISUnion/Calculator/tree/master",
+    "repository_url": "https://github.com/Lazy-Bing-Server/SignalContainer-MCDR/tree/master",
     "labels": [
       "tool"
     ],
-    "name": "Simple in-game calculator",
-    "version": "1.2.0",
+    "name": "Signal Container",
+    "version": "1.0.1",
     "description": {
-      "en_us": "A Simple in-game calculator",
-      "zh_cn": "一个简单的游戏内计算器"
+      "en_us": "Obtain container that could output specified container",
+      "zh_cn": "Obtain container that could output specified container"
+    },
+    "dependencies": {},
+    "update_time": "2025-03-03 22:08:25",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "simple_test",
+    "authors": [
+      {
+        "name": "Ricky",
+        "link": "https://github.com/R1ckyH"
+      }
+    ],
+    "repository_url": "https://github.com/R1ckyH/simple_test/tree/master",
+    "labels": [
+      "information"
+    ],
+    "name": "simple_test",
+    "version": "3.0.0",
+    "description": {
+      "en_us": "testing basic server problem.",
+      "zh_cn": "服务器基础自检插件。"
     },
     "dependencies": {
-      "mcdreforged": ">=2.1.0-beta"
+      "mcdreforged": ">=2.0.0"
     },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -3640,7 +3569,7 @@
     "dependencies": {
       "mcdreforged": ">=2.1.0-beta"
     },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:25",
     "latest_version": null,
     "last_update_time": null
   },
@@ -3666,7 +3595,132 @@
       "mcdreforged": ">=2.0.0",
       "googletrans": "==4.0.0rc1"
     },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:26",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "leader_reforged",
+    "authors": [
+      {
+        "name": "XavierWah",
+        "link": "https://github.com/XavierWah"
+      }
+    ],
+    "repository_url": "https://github.com/Minecraft-AMS/Leader-Reforged/tree/master",
+    "labels": [
+      "tool"
+    ],
+    "name": "Leader Reforged",
+    "version": "1.1.2",
+    "description": {
+      "en_us": "This is a simplified and reforged version for Leader, allowing to mark a leader.",
+      "zh_cn": "这个插件简化并实现了 Leader 的功能，使得可以指出一个玩家作为导游。"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.0.0"
+    },
+    "update_time": "2025-03-03 22:08:26",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "simple_calculator",
+    "authors": [
+      {
+        "name": "Fallen_Breath",
+        "link": "https://github.com/Fallen-Breath"
+      }
+    ],
+    "repository_url": "https://github.com/TISUnion/Calculator/tree/master",
+    "labels": [
+      "tool"
+    ],
+    "name": "Simple in-game calculator",
+    "version": "1.2.0",
+    "description": {
+      "en_us": "A Simple in-game calculator",
+      "zh_cn": "一个简单的游戏内计算器"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.1.0-beta"
+    },
+    "update_time": "2025-03-03 22:08:26",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "sshclient",
+    "authors": [
+      {
+        "name": "Mooling0602",
+        "link": "https://github.com/Mooling0602"
+      }
+    ],
+    "repository_url": "https://github.com/Mooling0602/SSHClient-MCDR/tree/main",
+    "labels": [
+      "management"
+    ],
+    "name": "SSHClient",
+    "version": "0.0.1",
+    "description": {
+      "en_us": "A SSH client instance for MCDR.",
+      "zh_cn": "一个MCDR的SSH客户端实例"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.1.0"
+    },
+    "update_time": "2025-03-03 22:08:26",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "the_offline_ops",
+    "authors": [
+      {
+        "name": "ltBerryshdo",
+        "link": "https://github.com/ltBerryshdo"
+      }
+    ],
+    "repository_url": "https://github.com/ltBerryshdo/the_offline_ops/tree/main",
+    "labels": [
+      "management"
+    ],
+    "name": "The Offline ops",
+    "version": "1.1",
+    "description": {
+      "en_us": "Check the player's IP to prevent impersonation of logging into the offline server",
+      "zh_cn": "检测玩家IP以防止冒名登陆离线服务器"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.6.0"
+    },
+    "update_time": "2025-03-03 22:08:26",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "smart_backup",
+    "authors": [
+      {
+        "name": "zyxkad",
+        "link": "https://github.com/zyxkad"
+      }
+    ],
+    "repository_url": "https://github.com/kmcsr/smart_backup_mcdr/tree/master",
+    "labels": [
+      "management"
+    ],
+    "name": "SmartBackup",
+    "version": "1.4.2",
+    "description": {
+      "en_us": "A Minecraft Backup Plugin",
+      "zh_cn": "一个多功能Minecraft存档备份插件"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.0.0"
+    },
+    "update_time": "2025-03-03 22:08:26",
     "latest_version": null,
     "last_update_time": null
   },
@@ -3692,57 +3746,7 @@
       "mcdreforged": ">=2.13",
       "minecraft_command_register": ">=2.13.2"
     },
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "smart_backup",
-    "authors": [
-      {
-        "name": "zyxkad",
-        "link": "https://github.com/zyxkad"
-      }
-    ],
-    "repository_url": "https://github.com/kmcsr/smart_backup_mcdr/tree/master",
-    "labels": [
-      "management"
-    ],
-    "name": "SmartBackup",
-    "version": "1.4.2",
-    "description": {
-      "en_us": "A Minecraft Backup Plugin",
-      "zh_cn": "一个多功能Minecraft存档备份插件"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.0.0"
-    },
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "simple_test",
-    "authors": [
-      {
-        "name": "Ricky",
-        "link": "https://github.com/R1ckyH"
-      }
-    ],
-    "repository_url": "https://github.com/R1ckyH/simple_test/tree/master",
-    "labels": [
-      "information"
-    ],
-    "name": "simple_test",
-    "version": "3.0.0",
-    "description": {
-      "en_us": "testing basic server problem.",
-      "zh_cn": "服务器基础自检插件。"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.0.0"
-    },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:26",
     "latest_version": null,
     "last_update_time": null
   },
@@ -3769,7 +3773,7 @@
       "kpi": "~1.5.0",
       "loginproxy": "~0.8.0"
     },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:26",
     "latest_version": null,
     "last_update_time": null
   },
@@ -3794,7 +3798,7 @@
     "dependencies": {
       "mcdreforged": ">=2.1.0"
     },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:26",
     "latest_version": null,
     "last_update_time": null
   },
@@ -3817,158 +3821,7 @@
       "zh_cn": "Keep your Minecraft server up-to-date with the latest snapshot"
     },
     "dependencies": {},
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "the_offline_ops",
-    "authors": [
-      {
-        "name": "ltBerryshdo",
-        "link": "https://github.com/ltBerryshdo"
-      }
-    ],
-    "repository_url": "https://github.com/ltBerryshdo/the_offline_ops/tree/main",
-    "labels": [
-      "management"
-    ],
-    "name": "The Offline ops",
-    "version": "1.1",
-    "description": {
-      "en_us": "Check the player's IP to prevent impersonation of logging into the offline server",
-      "zh_cn": "检测玩家IP以防止冒名登陆离线服务器"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.6.0"
-    },
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "timed_quick_backup_multi",
-    "authors": [
-      {
-        "name": "Fallen_Breath",
-        "link": "https://github.com/Fallen-Breath"
-      }
-    ],
-    "repository_url": "https://github.com/TISUnion/TimedQBM/tree/master",
-    "labels": [
-      "management"
-    ],
-    "name": "Timed QBM",
-    "version": "1.3.0",
-    "description": {
-      "en_us": "A Quick-Backup-Multi extension for automatically trigger QBM at given interval",
-      "zh_cn": "一个QuickBackupM插件的扩展，用于定时触发QBM从而进行自动备份"
-    },
-    "dependencies": {
-      "quick_backup_multi": ">=1.1.0"
-    },
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "sshclient",
-    "authors": [
-      {
-        "name": "Mooling0602",
-        "link": "https://github.com/Mooling0602"
-      }
-    ],
-    "repository_url": "https://github.com/Mooling0602/SSHClient-MCDR/tree/main",
-    "labels": [
-      "management"
-    ],
-    "name": "SSHClient",
-    "version": "0.0.1",
-    "description": {
-      "en_us": "A SSH client instance for MCDR.",
-      "zh_cn": "一个MCDR的SSH客户端实例"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.1.0"
-    },
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "stats_helper",
-    "authors": [
-      {
-        "name": "Fallen_Breath",
-        "link": "https://github.com/Fallen-Breath"
-      }
-    ],
-    "repository_url": "https://github.com/TISUnion/StatsHelper/tree/master",
-    "labels": [
-      "tool",
-      "information"
-    ],
-    "name": "Stats Helper",
-    "version": "7.5.1",
-    "description": {
-      "en_us": "A Minecraft statistic helper",
-      "zh_cn": "一个 Minecraft 统计信息助手"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.1.0-beta.1"
-    },
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "timed_restart",
-    "authors": [
-      {
-        "name": "QingMo",
-        "link": "https://github.com/QingMo-A"
-      }
-    ],
-    "repository_url": "https://github.com/QingMo-A/TimedRestart/tree/main",
-    "labels": [
-      "management"
-    ],
-    "name": "Timed Restart",
-    "version": "1.0.0",
-    "description": {
-      "en_us": "Scheduled Server Restart",
-      "zh_cn": "定时重启服务器"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.6.0"
-    },
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "tips",
-    "authors": [
-      {
-        "name": "Mooling0602",
-        "link": "https://github.com/Mooling0602"
-      }
-    ],
-    "repository_url": "https://github.com/Mooling0602/Tips-MCDR/tree/main",
-    "labels": [
-      "information"
-    ],
-    "name": "Tips",
-    "version": "0.0.1",
-    "description": {
-      "en_us": "Send random tips to online players.",
-      "zh_cn": "向在线玩家发送随机提示。"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.1.0"
-    },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:26",
     "latest_version": null,
     "last_update_time": null
   },
@@ -3995,33 +3848,108 @@
       "zh_cn": "一个基于python随机数的赛博轮盘赌插件"
     },
     "dependencies": null,
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:26",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "tpm",
+    "id": "stats_helper",
     "authors": [
       {
-        "name": "zyxkad",
-        "link": "https://github.com/zyxkad"
+        "name": "Fallen_Breath",
+        "link": "https://github.com/Fallen-Breath"
       }
     ],
-    "repository_url": "https://github.com/kmcsr/tpmanager_mcdr/tree/master",
+    "repository_url": "https://github.com/TISUnion/StatsHelper/tree/master",
     "labels": [
-      "tool"
+      "tool",
+      "information"
     ],
-    "name": "TpManager",
-    "version": "0.5.1",
+    "name": "Stats Helper",
+    "version": "7.5.1",
     "description": {
-      "en_us": "A Minecraft teleport manager",
-      "zh_cn": "一个Minecraft服务器传送管理"
+      "en_us": "A Minecraft statistic helper",
+      "zh_cn": "一个 Minecraft 统计信息助手"
     },
     "dependencies": {
-      "mcdreforged": "^2.3.0",
-      "kpi": "~1.5.0"
+      "mcdreforged": ">=2.1.0-beta.1"
     },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:26",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "timed_restart",
+    "authors": [
+      {
+        "name": "QingMo",
+        "link": "https://github.com/QingMo-A"
+      }
+    ],
+    "repository_url": "https://github.com/QingMo-A/TimedRestart/tree/main",
+    "labels": [
+      "management"
+    ],
+    "name": "Timed Restart",
+    "version": "1.0.0",
+    "description": {
+      "en_us": "Scheduled Server Restart",
+      "zh_cn": "定时重启服务器"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.6.0"
+    },
+    "update_time": "2025-03-03 22:08:26",
+    "latest_version": "1.0.0",
+    "last_update_time": "2025-02-13 10:43:50.000"
+  },
+  {
+    "id": "tips",
+    "authors": [
+      {
+        "name": "Mooling0602",
+        "link": "https://github.com/Mooling0602"
+      }
+    ],
+    "repository_url": "https://github.com/Mooling0602/Tips-MCDR/tree/main",
+    "labels": [
+      "information"
+    ],
+    "name": "Tips",
+    "version": "0.0.1",
+    "description": {
+      "en_us": "Send random tips to online players.",
+      "zh_cn": "向在线玩家发送随机提示。"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.1.0"
+    },
+    "update_time": "2025-03-03 22:08:26",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "timed_quick_backup_multi",
+    "authors": [
+      {
+        "name": "Fallen_Breath",
+        "link": "https://github.com/Fallen-Breath"
+      }
+    ],
+    "repository_url": "https://github.com/TISUnion/TimedQBM/tree/master",
+    "labels": [
+      "management"
+    ],
+    "name": "Timed QBM",
+    "version": "1.3.0",
+    "description": {
+      "en_us": "A Quick-Backup-Multi extension for automatically trigger QBM at given interval",
+      "zh_cn": "一个QuickBackupM插件的扩展，用于定时触发QBM从而进行自动备份"
+    },
+    "dependencies": {
+      "quick_backup_multi": ">=1.1.0"
+    },
+    "update_time": "2025-03-03 22:08:26",
     "latest_version": null,
     "last_update_time": null
   },
@@ -4045,55 +3973,7 @@
       "zh_cn": "ToDoList，待办清单"
     },
     "dependencies": null,
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "venture_chat_handler",
-    "authors": [
-      {
-        "name": "MC_Nirvana",
-        "link": "https://github.com/MC-Nirvana"
-      }
-    ],
-    "repository_url": "https://github.com/MC-Nirvana/VentureChatHandler/tree/main",
-    "labels": [
-      "handler"
-    ],
-    "name": "VentureChatHandler",
-    "version": "1.0.0",
-    "description": {
-      "en_us": "Make MCDReforged able to parse VentureChat modified messages",
-      "zh_cn": "使MCDReforged能够正常解析由VentureChat修改过后的消息"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.1.0"
-    },
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "uuid_api",
-    "authors": [
-      {
-        "name": "Andy Zhang",
-        "link": "https://github.com/AnzhiZhang"
-      }
-    ],
-    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/uuid_api",
-    "labels": [
-      "api"
-    ],
-    "name": "UUIDAPI",
-    "version": "0.1.2",
-    "description": {
-      "en_us": "UUID API",
-      "zh_cn": "UUID API"
-    },
-    "dependencies": null,
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:26",
     "latest_version": null,
     "last_update_time": null
   },
@@ -4116,32 +3996,7 @@
       "zh_cn": "基于MCDR和carpet bot的自动刷宝库方法"
     },
     "dependencies": null,
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "where2go",
-    "authors": [
-      {
-        "name": "tanh_Heng",
-        "link": "https://github.com/tanhHeng"
-      }
-    ],
-    "repository_url": "https://github.com/LazyAlienServer/Where2go/tree/main",
-    "labels": [
-      "information"
-    ],
-    "name": "Where2go",
-    "version": "0.2.5",
-    "description": {
-      "en_us": "An advanced 'location' plugin including sharing waypoints, search player pos, etc.",
-      "zh_cn": "一个功能强大的位置插件，包含共享坐标点、查询玩家位置等功能"
-    },
-    "dependencies": {
-      "mcdreforged": ">=2.6.0"
-    },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:26",
     "latest_version": null,
     "last_update_time": null
   },
@@ -4166,7 +4021,80 @@
     "dependencies": {
       "mcdreforged": ">=2.1.0"
     },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:26",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "where2go",
+    "authors": [
+      {
+        "name": "tanh_Heng",
+        "link": "https://github.com/tanhHeng"
+      }
+    ],
+    "repository_url": "https://github.com/LazyAlienServer/Where2go/tree/main",
+    "labels": [
+      "information"
+    ],
+    "name": "Where2go",
+    "version": "0.2.5",
+    "description": {
+      "en_us": "An advanced 'location' plugin including sharing waypoints, search player pos, etc.",
+      "zh_cn": "一个功能强大的位置插件，包含共享坐标点、查询玩家位置等功能"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.6.0"
+    },
+    "update_time": "2025-03-03 22:08:26",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "uuid_api",
+    "authors": [
+      {
+        "name": "Andy Zhang",
+        "link": "https://github.com/AnzhiZhang"
+      }
+    ],
+    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/uuid_api",
+    "labels": [
+      "api"
+    ],
+    "name": "UUIDAPI",
+    "version": "0.1.2",
+    "description": {
+      "en_us": "UUID API",
+      "zh_cn": "UUID API"
+    },
+    "dependencies": null,
+    "update_time": "2025-03-03 22:08:26",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "venture_chat_handler",
+    "authors": [
+      {
+        "name": "MC_Nirvana",
+        "link": "https://github.com/MC-Nirvana"
+      }
+    ],
+    "repository_url": "https://github.com/MC-Nirvana/VentureChatHandler/tree/main",
+    "labels": [
+      "handler"
+    ],
+    "name": "VentureChatHandler",
+    "version": "1.0.0",
+    "description": {
+      "en_us": "Make MCDReforged able to parse VentureChat modified messages",
+      "zh_cn": "使MCDReforged能够正常解析由VentureChat修改过后的消息"
+    },
+    "dependencies": {
+      "mcdreforged": ">=2.1.0"
+    },
+    "update_time": "2025-03-03 22:08:26",
     "latest_version": null,
     "last_update_time": null
   },
@@ -4192,7 +4120,55 @@
       "minecraft_data_api": "*",
       "mcdreforged": ">=2.12.0"
     },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:26",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "run_some_commands",
+    "authors": [
+      {
+        "name": "FlyingShuriken",
+        "link": "https://github.com/FlyingShuriken"
+      }
+    ],
+    "repository_url": "https://github.com/FlyingShuriken/MCDR-plugins/tree/main",
+    "labels": [
+      "tool"
+    ],
+    "name": "Run Some Commands",
+    "version": "1.0.0",
+    "description": {
+      "en_us": "Let player run whitelisted vanilla command",
+      "zh_cn": "讓普通玩家執行已被加入白名單的原版指令"
+    },
+    "dependencies": null,
+    "update_time": "2025-03-03 22:08:26",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "whitelist_api",
+    "authors": [
+      {
+        "name": "Aimerny",
+        "link": "https://github.com/Aimerny"
+      }
+    ],
+    "repository_url": "https://github.com/Aimerny/MCDRPlugins/tree/main/src/whitelist_api",
+    "labels": [
+      "api"
+    ],
+    "name": "WhitelistAPI",
+    "version": "1.3.4",
+    "description": {
+      "en_us": "whitelist common api",
+      "zh_cn": "通用的白名单API"
+    },
+    "dependencies": {
+      "mcdreforged": "^2.6.0"
+    },
+    "update_time": "2025-03-03 22:08:26",
     "latest_version": null,
     "last_update_time": null
   },
@@ -4218,7 +4194,32 @@
       "mcdreforged": ">=2.6.0",
       "minecraft_data_api": "*"
     },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:26",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "xevents",
+    "authors": [
+      {
+        "name": "Jel1ySpot",
+        "link": "https://github.com/Jel1ySpot"
+      }
+    ],
+    "repository_url": "https://github.com/Jel1ySpot/MCDReforgedPlugins/tree/main/src/xEvents",
+    "labels": [
+      "api"
+    ],
+    "name": "xEvents",
+    "version": "1.0.0",
+    "description": {
+      "en_us": "更多事件",
+      "zh_cn": "更多事件"
+    },
+    "dependencies": {
+      "minecraft_data_api": ">=1.4"
+    },
+    "update_time": "2025-03-03 22:08:26",
     "latest_version": null,
     "last_update_time": null
   },
@@ -4243,32 +4244,7 @@
     "dependencies": {
       "mcdreforged": ">=2.2.0"
     },
-    "update_time": "2025-03-03 21:17:45",
-    "latest_version": null,
-    "last_update_time": null
-  },
-  {
-    "id": "whitelist_api",
-    "authors": [
-      {
-        "name": "Aimerny",
-        "link": "https://github.com/Aimerny"
-      }
-    ],
-    "repository_url": "https://github.com/Aimerny/MCDRPlugins/tree/main/src/whitelist_api",
-    "labels": [
-      "api"
-    ],
-    "name": "WhitelistAPI",
-    "version": "1.3.4",
-    "description": {
-      "en_us": "whitelist common api",
-      "zh_cn": "通用的白名单API"
-    },
-    "dependencies": {
-      "mcdreforged": "^2.6.0"
-    },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:26",
     "latest_version": null,
     "last_update_time": null
   },
@@ -4293,7 +4269,7 @@
     "dependencies": {
       "mcdreforged": ">=2.0.0-alpha.1"
     },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:26",
     "latest_version": null,
     "last_update_time": null
   },
@@ -4323,32 +4299,30 @@
     "dependencies": {
       "mcdreforged": ">=2.7.0"
     },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:26",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "xevents",
+    "id": "ye_announcement",
     "authors": [
       {
-        "name": "Jel1ySpot",
-        "link": "https://github.com/Jel1ySpot"
+        "name": "XiaoYeYa",
+        "link": "https://github.com/XiaoYeYa"
       }
     ],
-    "repository_url": "https://github.com/Jel1ySpot/MCDReforgedPlugins/tree/main/src/xEvents",
+    "repository_url": "https://github.com/XiaoYeYa/ye_announcement//tree/master",
     "labels": [
-      "api"
+      "tool"
     ],
-    "name": "xEvents",
-    "version": "1.0.0",
+    "name": "Ye_announcement",
+    "version": "1.4.1",
     "description": {
-      "en_us": "更多事件",
-      "zh_cn": "更多事件"
+      "en_us": "Announce players when they join the game",
+      "zh_cn": "当玩家加入游戏时向其发公告"
     },
-    "dependencies": {
-      "minecraft_data_api": ">=1.4"
-    },
-    "update_time": "2025-03-03 21:17:45",
+    "dependencies": null,
+    "update_time": "2025-03-03 22:08:26",
     "latest_version": null,
     "last_update_time": null
   },
@@ -4373,30 +4347,56 @@
     "dependencies": {
       "mcdreforged": ">=2.0.0"
     },
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:26",
     "latest_version": null,
     "last_update_time": null
   },
   {
-    "id": "ye_announcement",
+    "id": "tpm",
     "authors": [
       {
-        "name": "XiaoYeYa",
-        "link": "https://github.com/XiaoYeYa"
+        "name": "zyxkad",
+        "link": "https://github.com/zyxkad"
       }
     ],
-    "repository_url": "https://github.com/XiaoYeYa/ye_announcement//tree/master",
+    "repository_url": "https://github.com/kmcsr/tpmanager_mcdr/tree/master",
     "labels": [
       "tool"
     ],
-    "name": "Ye_announcement",
-    "version": "1.4.1",
+    "name": "TpManager",
+    "version": "0.5.1",
     "description": {
-      "en_us": "Announce players when they join the game",
-      "zh_cn": "当玩家加入游戏时向其发公告"
+      "en_us": "A Minecraft teleport manager",
+      "zh_cn": "一个Minecraft服务器传送管理"
+    },
+    "dependencies": {
+      "mcdreforged": "^2.3.0",
+      "kpi": "~1.5.0"
+    },
+    "update_time": "2025-03-03 22:08:26",
+    "latest_version": null,
+    "last_update_time": null
+  },
+  {
+    "id": "online_player_api",
+    "authors": [
+      {
+        "name": "Andy Zhang",
+        "link": "https://github.com/AnzhiZhang"
+      }
+    ],
+    "repository_url": "https://github.com/AnzhiZhang/MCDReforgedPlugins/tree/master/src/online_player_api",
+    "labels": [
+      "api"
+    ],
+    "name": "OnlinePlayerAPI",
+    "version": "1.0.0",
+    "description": {
+      "en_us": "Online Player API",
+      "zh_cn": "在线玩家 API"
     },
     "dependencies": null,
-    "update_time": "2025-03-03 21:17:45",
+    "update_time": "2025-03-03 22:08:27",
     "latest_version": null,
     "last_update_time": null
   }
