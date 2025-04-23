@@ -3,3 +3,5 @@
 *.pyz
 # 忽略配置文件
 .config
+# 忽略data目录下的plugins.json文件
+/data/plugins.json
