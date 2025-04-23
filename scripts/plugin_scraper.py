@@ -447,7 +447,7 @@ def process_plugin(plugin_folder, session):
             'description': plugin_info.get('description', existing_data.get('description', {'en_us': '暂无描述', 'zh_cn': '暂无描述'})),
             'dependencies': plugin_info.get('dependencies', existing_data.get('dependencies', {})),
             'labels': local_info.get('labels', existing_data.get('labels', [])),
-            'repository_url': plugin_info.get('link', repository_url),
+            'repository_url': repository_url,
             'update_time': get_beijing_time(),
             'latest_version': latest_version,
             'license': repo_info.get('license', existing_data.get('license')),
