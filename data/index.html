@@ -3,38 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>插件目录</title>
+    <title>MCDR插件目录</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2980b9;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-gray: #f5f5f5;
+            --border-color: #ddd;
+            --hover-color: #f9f9f9;
         }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+        }
+        
+        .content-section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--light-gray);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
         table {
             width: 100%;
             border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
         }
+        
         th, td {
-            padding: 12px;
+            padding: 12px 15px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid var(--border-color);
         }
+        
         th {
-            background-color: #f5f5f5;
+            background-color: var(--light-gray);
+            font-weight: 600;
+            color: var(--secondary-color);
         }
+        
         tr:hover {
-            background-color: #f9f9f9;
+            background-color: var(--hover-color);
         }
+        
         .description {
-            max-width: 400px;
+            max-width: 300px;
             white-space: pre-wrap;
         }
 
         /* API 文档样式 */
         .api-docs {
             margin: 40px 0;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
         }
 
         .api-section {
@@ -42,13 +105,14 @@
         }
 
         .api-section h3 {
-            color: #2c3e50;
-            border-bottom: 2px solid #e9ecef;
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--light-gray);
             padding-bottom: 10px;
         }
 
         .code-block {
-            background-color: #f5f5f5;
+            background-color: #2c3e50;
+            color: #ecf0f1;
             padding: 15px;
             border-radius: 6px;
             margin: 15px 0;
@@ -61,7 +125,6 @@
 
         .code-block code {
             font-family: 'Courier New', monospace;
-            color: #2c3e50;
             line-height: 1.6;
         }
 
@@ -70,43 +133,246 @@
         }
 
         .example h4 {
-            color: #34495e;
+            color: var(--secondary-color);
             margin-bottom: 10px;
         }
 
-        #plugin-list span {
+        #plugin-list-section span {
             margin-left: 10px;
-            font-size: 16px;
+            font-size: 0.9rem;
+            color: #777;
         }
 
         #update-time {
-            font-size: 14px;
-            color: #999;
+            font-weight: bold;
+        }
+        
+        .controls {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .search-box input {
+            padding: 10px 15px;
+            width: 300px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+        
+        .filter-options {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .filter-options select {
+            padding: 10px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 0.95rem;
+            background-color: white;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 3px 10px;
+            margin: 2px 4px 2px 0;
+            background-color: var(--light-gray);
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+        
+        .repo-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .repo-link:hover {
+            text-decoration: underline;
+            color: var(--secondary-color);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .search-box input {
+                width: 100%;
+            }
+            
+            .filter-options {
+                flex-direction: column;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .description {
+                max-width: 150px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>插件目录</h1>
-    <h2>目录</h2>
-    <ul>
-        <li><a href="#plugin-list">插件列表</a></li>
-    </ul>
+    <header>
+        <div class="container">
+            <h1>MCDR插件目录</h1>
+            <p>为您的MCDR服务器寻找优质插件</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content-section">
+            <h2>目录</h2>
+            <ul>
+                <li><a href="#api-docs-section">API文档</a></li>
+                <li><a href="#plugin-list-section">插件列表</a></li>
+            </ul>
+        </div>
+        
+        <div id="api-docs-section" class="content-section">
+            <h2>API 文档</h2>
+            
+            <div class="api-section">
+                <h3>基本信息</h3>
+                <p>本API提供对插件目录的访问，允许查询所有插件的元数据。</p>
+                <ul>
+                    <li>请求方式: GET</li>
+                    <li>基本URL: <code>https://looseprince.github.io/Plugin-Catalogue//plugins.json</code></li>
+                    <li>返回格式: JSON</li>
+                </ul>
+            </div>
+
+            <div class="api-section">
+                <h3>API端点</h3>
+                <div class="endpoint">
+                    <h4>获取所有插件</h4>
+                    <p>返回所有可用插件的信息。</p>
+                    <div class="code-block">
+                        <pre><code>GET /data/plugins.json</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="api-section">
+                <h3>响应格式</h3>
+                <p>API返回一个插件对象数组，每个插件对象包含以下字段：</p>
+                <div class="code-block">
+                    <pre><code>{
+  "id": "插件唯一标识符",
+  "name": "插件名称",
+  "version": "当前版本",
+  "description": {
+    "en_us": "英文描述",
+    "zh_cn": "中文描述"
+  },
+  "dependencies": {}, // 插件依赖
+  "labels": [], // 插件标签
+  "repository_url": "GitHub仓库URL",
+  "update_time": "数据更新时间",
+  "latest_version": "最新版本",
+  "license": "许可证类型",
+  "license_url": "许可证URL",
+  "downloads": 下载次数,
+  "readme_url": "README文件URL",
+  "last_update_time": "最后更新时间",
+  "authors": [
+    {
+      "name": "作者名称",
+      "link": "作者链接"
+    }
+  ]
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="api-section">
+                <h3>使用示例</h3>
+                <div class="example">
+                    <h4>使用fetch API获取插件数据</h4>
+                    <div class="code-block">
+                        <pre><code>// 使用JavaScript fetch API获取插件数据
+fetch('https://looseprince.github.io/Plugin-Catalogue//plugins.json')
+  .then(response => response.json())
+  .then(plugins => {
+    console.log('获取到插件数量:', plugins.length);
+    // 处理插件数据
+    plugins.forEach(plugin => {
+      console.log(`插件名称: ${plugin.name}, 版本: ${plugin.latest_version}`);
+    });
+  })
+  .catch(error => console.error('获取插件数据失败:', error));</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="plugin-list-section" class="content-section">
+            <h2>插件列表<span>数据更新时间: <span id="update-time">2025-01-25 12:56:01.000</span></span></h2>
+            
+            <div class="controls">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="搜索插件...">
+                </div>
+                <div class="filter-options">
+                    <select id="tag-filter">
+                        <option value="">所有标签</option>
+                        <!-- 标签选项会动态填充 -->
+                    </select>
+                    <select id="sort-by">
+                        <option value="name">按名称排序</option>
+                        <option value="downloads">按下载量排序</option>
+                        <option value="update_time">按更新时间排序</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>名称</th>
+                            <th>版本</th>
+                            <th>描述</th>
+                            <th>作者</th>
+                            <th>标签</th>
+                            <th>下载量</th>
+                            <th>许可证</th>
+                            <th>更新时间</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 插件数据将通过JavaScript动态填充 -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
     
-    <h2 id="plugin-list">插件列表<span>数据更新时间:<span id="update-time">2025-01-25 12:56:01.000</span></span></h2>
-    <table>
-        <thead>
-            <tr>
-                <th>名称</th>
-                <th>版本</th>
-                <th>描述</th>
-                <th>作者</th>
-                <th>更新时间</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- 插件数据将通过JavaScript动态填充 -->
-        </tbody>
-    </table>
+    <footer>
+        <div class="container">
+            <p>MCDR插件目录 &copy; 2025 | 数据每2小时自动更新</p>
+        </div>
+    </footer>
 
     <script>
         // 获取插件数据
@@ -115,40 +381,167 @@
             .then(data => {
                 const tbody = document.querySelector('tbody');
                 const updateTime = document.getElementById('update-time');
-                updateTime.textContent = data[0].update_time;
+                const tagFilter = document.getElementById('tag-filter');
+                const sortBy = document.getElementById('sort-by');
+                const searchInput = document.getElementById('search-input');
+                
+                // 更新时间显示
+                if (data.length > 0) {
+                    updateTime.textContent = data[0].update_time;
+                }
+                
+                // 收集所有标签
+                const allTags = new Set();
                 data.forEach(plugin => {
-                    const row = document.createElement('tr');
-                    
-                    // 名称
-                    const nameCell = document.createElement('td');
-                    nameCell.textContent = plugin.name || plugin.id;
-                    row.appendChild(nameCell);
-                    
-                    // 版本
-                    const versionCell = document.createElement('td');
-                    versionCell.textContent = plugin.latest_version || plugin.version || 'N/A';
-                    row.appendChild(versionCell);
-                    
-                    // 描述
-                    const descCell = document.createElement('td');
-                    descCell.className = 'description';
-                    const desc = plugin.description?.zh_cn || plugin.description?.en_us || '无描述';
-                    descCell.textContent = desc;
-                    row.appendChild(descCell);
-                    
-                    // 作者
-                    const authorCell = document.createElement('td');
-                    const authors = plugin.authors?.map(a => a.name).join(', ') || '未知';
-                    authorCell.textContent = authors;
-                    row.appendChild(authorCell);
-                    
-                    // 更新时间
-                    const updateCell = document.createElement('td');
-                    updateCell.textContent = plugin.last_update_time || '未知';
-                    row.appendChild(updateCell);
-                    
-                    tbody.appendChild(row);
+                    if (plugin.labels && Array.isArray(plugin.labels)) {
+                        plugin.labels.forEach(tag => allTags.add(tag));
+                    }
                 });
+                
+                // 填充标签过滤器
+                allTags.forEach(tag => {
+                    const option = document.createElement('option');
+                    option.value = tag;
+                    option.textContent = tag;
+                    tagFilter.appendChild(option);
+                });
+                
+                // 渲染插件列表函数
+                function renderPlugins(plugins) {
+                    tbody.innerHTML = ''; // 清空表格
+                    
+                    plugins.forEach(plugin => {
+                        const row = document.createElement('tr');
+                        
+                        // 名称 (带链接)
+                        const nameCell = document.createElement('td');
+                        const nameLink = document.createElement('a');
+                        nameLink.href = plugin.repository_url;
+                        nameLink.target = "_blank";
+                        nameLink.className = 'repo-link';
+                        nameLink.textContent = plugin.name || plugin.id;
+                        nameCell.appendChild(nameLink);
+                        row.appendChild(nameCell);
+                        
+                        // 版本
+                        const versionCell = document.createElement('td');
+                        versionCell.textContent = plugin.latest_version || plugin.version || 'N/A';
+                        row.appendChild(versionCell);
+                        
+                        // 描述
+                        const descCell = document.createElement('td');
+                        descCell.className = 'description';
+                        const desc = plugin.description?.zh_cn || plugin.description?.en_us || '无描述';
+                        descCell.textContent = desc;
+                        row.appendChild(descCell);
+                        
+                        // 作者
+                        const authorCell = document.createElement('td');
+                        if (plugin.authors && plugin.authors.length > 0) {
+                            plugin.authors.forEach((author, index) => {
+                                if (index > 0) authorCell.appendChild(document.createTextNode(', '));
+                                if (author.link) {
+                                    const authorLink = document.createElement('a');
+                                    authorLink.href = author.link;
+                                    authorLink.target = "_blank";
+                                    authorLink.className = 'repo-link';
+                                    authorLink.textContent = author.name;
+                                    authorCell.appendChild(authorLink);
+                                } else {
+                                    authorCell.appendChild(document.createTextNode(author.name));
+                                }
+                            });
+                        } else {
+                            authorCell.textContent = '未知';
+                        }
+                        row.appendChild(authorCell);
+                        
+                        // 标签
+                        const tagsCell = document.createElement('td');
+                        if (plugin.labels && plugin.labels.length > 0) {
+                            plugin.labels.forEach(tag => {
+                                const tagSpan = document.createElement('span');
+                                tagSpan.className = 'tag';
+                                tagSpan.textContent = tag;
+                                tagsCell.appendChild(tagSpan);
+                            });
+                        } else {
+                            tagsCell.textContent = '-';
+                        }
+                        row.appendChild(tagsCell);
+                        
+                        // 下载量
+                        const downloadsCell = document.createElement('td');
+                        downloadsCell.textContent = plugin.downloads || '0';
+                        row.appendChild(downloadsCell);
+                        
+                        // 许可证
+                        const licenseCell = document.createElement('td');
+                        if (plugin.license) {
+                            if (plugin.license_url) {
+                                const licenseLink = document.createElement('a');
+                                licenseLink.href = plugin.license_url;
+                                licenseLink.target = "_blank";
+                                licenseLink.className = 'repo-link';
+                                licenseLink.textContent = plugin.license;
+                                licenseCell.appendChild(licenseLink);
+                            } else {
+                                licenseCell.textContent = plugin.license;
+                            }
+                        } else {
+                            licenseCell.textContent = '未知';
+                        }
+                        row.appendChild(licenseCell);
+                        
+                        // 更新时间
+                        const updateCell = document.createElement('td');
+                        updateCell.textContent = plugin.last_update_time || '未知';
+                        row.appendChild(updateCell);
+                        
+                        tbody.appendChild(row);
+                    });
+                }
+                
+                // 过滤和排序插件
+                function filterAndSortPlugins() {
+                    const searchTerm = searchInput.value.toLowerCase();
+                    const selectedTag = tagFilter.value;
+                    const sortOption = sortBy.value;
+                    
+                    // 过滤
+                    let filteredPlugins = data.filter(plugin => {
+                        // 搜索名称和描述
+                        const nameMatch = (plugin.name || plugin.id).toLowerCase().includes(searchTerm);
+                        const descMatch = (plugin.description?.zh_cn || plugin.description?.en_us || '').toLowerCase().includes(searchTerm);
+                        const tagMatch = !selectedTag || (plugin.labels && plugin.labels.includes(selectedTag));
+                        
+                        return (nameMatch || descMatch) && tagMatch;
+                    });
+                    
+                    // 排序
+                    filteredPlugins.sort((a, b) => {
+                        if (sortOption === 'downloads') {
+                            return (b.downloads || 0) - (a.downloads || 0);
+                        } else if (sortOption === 'update_time') {
+                            return new Date(b.last_update_time || 0) - new Date(a.last_update_time || 0);
+                        } else {
+                            // 默认按名称排序
+                            const nameA = (a.name || a.id).toLowerCase();
+                            const nameB = (b.name || b.id).toLowerCase();
+                            return nameA.localeCompare(nameB);
+                        }
+                    });
+                    
+                    renderPlugins(filteredPlugins);
+                }
+                
+                // 添加事件监听器
+                searchInput.addEventListener('input', filterAndSortPlugins);
+                tagFilter.addEventListener('change', filterAndSortPlugins);
+                sortBy.addEventListener('change', filterAndSortPlugins);
+                
+                // 初始渲染
+                filterAndSortPlugins();
             })
             .catch(error => {
                 console.error('加载插件数据失败:', error);
