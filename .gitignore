@@ -1,3 +1,5 @@
 # 忽略mcdr和pyz文件
 *.mcdr
 *.pyz
+# 忽略配置文件
+.config
