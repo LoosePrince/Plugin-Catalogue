@@ -116,6 +116,25 @@ def get_file_content(session, owner, repo, path, branch='main'):
         print(f"解析 {owner}/{repo}/{path} 的内容失败: {e}")
         return None
 
+def check_repo_exists(session, owner, repo):
+    """检查GitHub仓库是否存在
+    
+    Args:
+        session: 请求会话
+        owner: 仓库所有者
+        repo: 仓库名称
+        
+    Returns:
+        bool: 仓库是否存在并可访问
+    """
+    url = f'https://api.github.com/repos/{owner}/{repo}'
+    try:
+        response = session.get(url, headers=HEADERS, verify=SSL_VERIFY)
+        return response.status_code == 200
+    except Exception as e:
+        print(f"检查仓库 {owner}/{repo} 是否存在时出错: {e}")
+        return False
+
 def find_plugin_json(session, owner, repo, branch='main', related_path=''):
     """在仓库中查找mcdreforged.plugin.json文件"""
     # 构建可能的插件文件路径
@@ -154,9 +173,10 @@ def get_repo_info(session, owner, repo):
         return {}
     
     repo_data = response.json()
+    license_data = repo_data.get('license') or {}
     return {
-        'license': repo_data.get('license', {}).get('spdx_id'),  # 使用SPDX ID（缩写形式）
-        'license_url': repo_data.get('license', {}).get('url'),
+        'license': license_data.get('spdx_id'),  # 使用SPDX ID（缩写形式）
+        'license_url': license_data.get('url'),
         'last_update_time': repo_data.get('pushed_at'),
         'stars': repo_data.get('stargazers_count', 0)
     }
@@ -342,6 +362,30 @@ def process_plugin(plugin_folder, session):
         branch = local_info.get('branch', 'main')
         related_path = local_info.get('related_path', '')
         
+        # 验证仓库是否存在
+        # 先检查仓库是否存在
+        repo_exists = check_repo_exists(session, owner, repo)
+        if not repo_exists:
+            print(f"仓库 {owner}/{repo} 不存在或无法访问，使用本地信息构建最小数据")
+            # 构建一个最小的插件信息
+            return {
+                'id': plugin_id,
+                'name': local_info.get('name', plugin_id),
+                'version': existing_data.get('version', '0.0.0'),
+                'description': existing_data.get('description', {'en_us': '暂无描述', 'zh_cn': '暂无描述'}),
+                'dependencies': {},
+                'labels': local_info.get('labels', []),
+                'repository_url': repository_url,
+                'update_time': get_beijing_time(),
+                'latest_version': existing_data.get('latest_version', '0.0.0'),
+                'license': existing_data.get('license'),
+                'license_url': existing_data.get('license_url'),
+                'downloads': existing_data.get('downloads', 0),
+                'readme_url': f'https://raw.githubusercontent.com/{owner}/{repo}/{branch}/README.md',
+                'last_update_time': existing_data.get('last_update_time'),
+                'authors': local_info.get('authors', [])
+            }
+        
         # 获取插件信息
         plugin_info = find_plugin_json(session, owner, repo, branch, related_path)
         if not plugin_info:
@@ -351,21 +395,33 @@ def process_plugin(plugin_folder, session):
                 'id': plugin_id,
                 'name': local_info.get('name', plugin_id),
                 'version': existing_data.get('version', '0.0.0'),
-                'description': existing_data.get('description', {'en_us': '', 'zh_cn': ''})
+                'description': existing_data.get('description', {'en_us': '暂无描述', 'zh_cn': '暂无描述'})
             }
         
         # 确认插件ID（优先使用plugin_info中的id）
         actual_plugin_id = plugin_info.get('id', plugin_id)
         
-        # 获取仓库信息
-        repo_info = get_repo_info(session, owner, repo)
+        # 获取仓库信息 - 可能会失败，使用默认值或现有值
+        try:
+            repo_info = get_repo_info(session, owner, repo) or {}
+        except Exception as e:
+            print(f"获取仓库信息失败: {e}")
+            repo_info = {}
         
-        # 获取下载次数
-        downloads = get_downloads_count(session, owner, repo)
+        # 获取下载次数 - 可能会失败，使用默认值或现有值
+        try:
+            downloads = get_downloads_count(session, owner, repo)
+        except Exception as e:
+            print(f"获取下载次数失败: {e}")
+            downloads = existing_data.get('downloads', 0)
         
-        # 获取最新版本号
-        latest_version = get_latest_version(session, owner, repo, actual_plugin_id)
-        if not latest_version:
+        # 获取最新版本号 - 可能会失败，使用默认值或现有值
+        try:
+            latest_version = get_latest_version(session, owner, repo, actual_plugin_id)
+            if not latest_version:
+                latest_version = plugin_info.get('version', existing_data.get('latest_version', '0.0.0'))
+        except Exception as e:
+            print(f"获取最新版本失败: {e}")
             latest_version = plugin_info.get('version', existing_data.get('latest_version', '0.0.0'))
         
         # 处理README路径
@@ -379,7 +435,7 @@ def process_plugin(plugin_folder, session):
                 readme_path = intro
         
         print(f"原始README路径: {readme_path}")
-        resolved_readme_path = resolve_readme_path(related_path, readme_path)
+        resolved_readme_path = resolve_readme_path(related_path, readme_path) or "README.md"
         readme_url = f'https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{resolved_readme_path}'
         print(f"最终README URL: {readme_url}")
         
@@ -388,7 +444,7 @@ def process_plugin(plugin_folder, session):
             'id': actual_plugin_id,
             'name': plugin_info.get('name', actual_plugin_id),
             'version': plugin_info.get('version', existing_data.get('version', '0.0.0')),
-            'description': plugin_info.get('description', existing_data.get('description', {'en_us': '', 'zh_cn': ''})),
+            'description': plugin_info.get('description', existing_data.get('description', {'en_us': '暂无描述', 'zh_cn': '暂无描述'})),
             'dependencies': plugin_info.get('dependencies', existing_data.get('dependencies', {})),
             'labels': local_info.get('labels', existing_data.get('labels', [])),
             'repository_url': plugin_info.get('link', repository_url),
@@ -426,8 +482,31 @@ def process_plugin(plugin_folder, session):
         return plugin_data
     
     except Exception as e:
+        import traceback
         print(f"处理插件 {os.path.basename(plugin_folder)} 时出错: {e}")
-        return None
+        print(traceback.format_exc())  # 打印完整的堆栈跟踪
+        
+        # 尝试构建一个最小的数据集
+        try:
+            local_info = get_plugin_info_from_folder(plugin_folder) or {}
+            plugin_id = os.path.basename(plugin_folder)
+            
+            # 构建最小数据
+            return {
+                'id': plugin_id,
+                'name': local_info.get('name', plugin_id),
+                'version': '0.0.0',
+                'description': {'en_us': '暂无描述', 'zh_cn': '暂无描述'},
+                'dependencies': {},
+                'labels': local_info.get('labels', []),
+                'repository_url': local_info.get('repository', ''),
+                'update_time': get_beijing_time(),
+                'latest_version': '0.0.0',
+                'downloads': 0,
+                'authors': local_info.get('authors', [])
+            }
+        except:
+            return None
 
 def scan_plugins(plugin_path, session):
     """扫描插件目录，获取所有插件信息"""
