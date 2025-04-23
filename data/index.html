@@ -3,280 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCDR插件目录</title>
-    <style>
-        :root {
-            --primary-color: #3498db;
-            --secondary-color: #2980b9;
-            --accent-color: #e74c3c;
-            --text-color: #333;
-            --light-gray: #f5f5f5;
-            --border-color: #ddd;
-            --hover-color: #f9f9f9;
-        }
-        
-        * {
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        
-        header p {
-            margin: 10px 0 0;
-            font-size: 1.2rem;
-        }
-        
-        .content-section {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            padding: 30px;
-            margin-bottom: 30px;
-        }
-        
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--light-gray);
-            padding-bottom: 10px;
-            margin-top: 0;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 0.95rem;
-        }
-        
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        th {
-            background-color: var(--light-gray);
-            font-weight: 600;
-            color: var(--secondary-color);
-        }
-        
-        tr:hover {
-            background-color: var(--hover-color);
-        }
-        
-        .description {
-            max-width: 300px;
-            white-space: pre-wrap;
-        }
-
-        /* API 文档样式 */
-        .api-docs {
-            margin: 40px 0;
-        }
-
-        .api-section {
-            margin: 30px 0;
-        }
-
-        .api-section h3 {
-            color: var(--secondary-color);
-            border-bottom: 2px solid var(--light-gray);
-            padding-bottom: 10px;
-        }
-
-        .code-block {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            padding: 15px;
-            border-radius: 6px;
-            margin: 15px 0;
-            overflow-x: auto;
-        }
-
-        .code-block pre {
-            margin: 0;
-        }
-
-        .code-block code {
-            font-family: 'Courier New', monospace;
-            line-height: 1.6;
-        }
-
-        .example {
-            margin: 20px 0;
-        }
-
-        .example h4 {
-            color: var(--secondary-color);
-            margin-bottom: 10px;
-        }
-
-        #plugin-list-section span {
-            margin-left: 10px;
-            font-size: 0.9rem;
-            color: #777;
-        }
-
-        #update-time {
-            font-weight: bold;
-        }
-        
-        .controls {
-            margin: 20px 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .search-box input {
-            padding: 10px 15px;
-            width: 300px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            font-size: 0.95rem;
-        }
-        
-        .filter-options {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .filter-options select {
-            padding: 10px 15px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            font-size: 0.95rem;
-            background-color: white;
-        }
-        
-        .tag {
-            display: inline-block;
-            padding: 3px 10px;
-            margin: 2px 4px 2px 0;
-            background-color: var(--light-gray);
-            border-radius: 12px;
-            font-size: 0.8rem;
-        }
-        
-        .repo-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .repo-link:hover {
-            text-decoration: underline;
-            color: var(--secondary-color);
-        }
-        
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding: 20px;
-            color: #777;
-            font-size: 0.9rem;
-            border-top: 1px solid var(--border-color);
-        }
-        
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .controls {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            
-            .search-box input {
-                width: 100%;
-            }
-            
-            .filter-options {
-                flex-direction: column;
-            }
-            
-            table {
-                display: block;
-                overflow-x: auto;
-            }
-            
-            .description {
-                max-width: 150px;
-            }
-        }
-    </style>
+    <title>插件目录</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
-    <header>
-        <div class="container">
-            <h1>MCDR插件目录</h1>
-            <p>为您的MCDR服务器寻找优质插件</p>
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-blue-600 text-white py-8 shadow-md">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl font-bold mb-2">插件目录</h1>
+            <p class="text-xl">第三方插件仓库（简化版）</p>
         </div>
     </header>
 
-    <div class="container">
-        <div class="content-section">
-            <h2>目录</h2>
-            <ul>
-                <li><a href="#api-docs-section">API文档</a></li>
-                <li><a href="#plugin-list-section">插件列表</a></li>
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-bold text-blue-600 pb-3 border-b border-gray-200">目录</h2>
+            <ul class="mt-4 list-disc list-inside">
+                <li><a href="#api-docs-section" class="text-blue-600 hover:underline">API文档</a></li>
+                <li><a href="#plugin-list-section" class="text-blue-600 hover:underline">插件列表</a></li>
             </ul>
         </div>
         
-        <div id="api-docs-section" class="content-section">
-            <h2>API 文档</h2>
+        <div id="api-docs-section" class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-bold text-blue-600 pb-3 border-b border-gray-200">API 文档</h2>
             
-            <div class="api-section">
-                <h3>基本信息</h3>
-                <p>本API提供对插件目录的访问，允许查询所有插件的元数据。</p>
-                <ul>
-                    <li>请求方式: GET</li>
-                    <li>基本URL: <code>https://looseprince.github.io/Plugin-Catalogue//plugins.json</code></li>
-                    <li>返回格式: JSON</li>
+            <div class="mt-6">
+                <h3 class="text-xl font-semibold text-blue-700 pb-2 border-b border-gray-200">基本信息</h3>
+                <p class="mt-3">本API提供对插件目录的访问，允许查询所有插件的元数据。</p>
+                <ul class="mt-2 space-y-1">
+                    <li class="flex items-center"><i class="fas fa-angle-right text-blue-500 mr-2"></i>请求方式: GET</li>
+                    <li class="flex items-center"><i class="fas fa-angle-right text-blue-500 mr-2"></i>基本URL: <code class="bg-gray-100 px-1 py-0.5 rounded">https://looseprince.github.io/Plugin-Catalogue/plugins.json</code></li>
+                    <li class="flex items-center"><i class="fas fa-angle-right text-blue-500 mr-2"></i>返回格式: JSON</li>
                 </ul>
             </div>
 
-            <div class="api-section">
-                <h3>API端点</h3>
-                <div class="endpoint">
-                    <h4>获取所有插件</h4>
-                    <p>返回所有可用插件的信息。</p>
-                    <div class="code-block">
-                        <pre><code>GET /data/plugins.json</code></pre>
+            <div class="mt-6">
+                <h3 class="text-xl font-semibold text-blue-700 pb-2 border-b border-gray-200">API端点</h3>
+                <div class="mt-3">
+                    <h4 class="text-lg font-medium text-blue-700 flex items-center"><i class="fas fa-link mr-2"></i>获取所有插件</h4>
+                    <p class="mt-1">返回所有可用插件的信息。</p>
+                    <div class="bg-gray-800 text-gray-100 p-4 rounded-md mt-2 overflow-x-auto">
+                        <pre><code>GET /plugins.json</code></pre>
                     </div>
                 </div>
             </div>
 
-            <div class="api-section">
-                <h3>响应格式</h3>
-                <p>API返回一个插件对象数组，每个插件对象包含以下字段：</p>
-                <div class="code-block">
+            <div class="mt-6">
+                <h3 class="text-xl font-semibold text-blue-700 pb-2 border-b border-gray-200">响应格式</h3>
+                <p class="mt-3">API返回一个插件对象数组，每个插件对象包含以下字段：</p>
+                <div class="bg-gray-800 text-gray-100 p-4 rounded-md mt-2 overflow-x-auto">
                     <pre><code>{
   "id": "插件唯一标识符",
   "name": "插件名称",
@@ -305,13 +82,13 @@
                 </div>
             </div>
 
-            <div class="api-section">
-                <h3>使用示例</h3>
-                <div class="example">
-                    <h4>使用fetch API获取插件数据</h4>
-                    <div class="code-block">
+            <div class="mt-6">
+                <h3 class="text-xl font-semibold text-blue-700 pb-2 border-b border-gray-200">使用示例</h3>
+                <div class="mt-3">
+                    <h4 class="text-lg font-medium text-blue-700 flex items-center"><i class="fas fa-code mr-2"></i>使用fetch API获取插件数据</h4>
+                    <div class="bg-gray-800 text-gray-100 p-4 rounded-md mt-2 overflow-x-auto">
                         <pre><code>// 使用JavaScript fetch API获取插件数据
-fetch('https://looseprince.github.io/Plugin-Catalogue//plugins.json')
+fetch('https://looseprince.github.io/Plugin-Catalogue/plugins.json')
   .then(response => response.json())
   .then(plugins => {
     console.log('获取到插件数量:', plugins.length);
@@ -326,19 +103,28 @@ fetch('https://looseprince.github.io/Plugin-Catalogue//plugins.json')
             </div>
         </div>
         
-        <div id="plugin-list-section" class="content-section">
-            <h2>插件列表<span>数据更新时间: <span id="update-time">2025-01-25 12:56:01.000</span></span></h2>
+        <div id="plugin-list-section" class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-2xl font-bold text-blue-600 pb-3 border-b border-gray-200 flex items-center">
+                <i class="fas fa-puzzle-piece mr-2"></i>插件列表
+                <span class="ml-2 text-sm font-normal text-gray-500">数据更新时间: <span id="update-time" class="font-semibold">2025-01-25 12:56:01.000</span></span>
+            </h2>
             
-            <div class="controls">
-                <div class="search-box">
-                    <input type="text" id="search-input" placeholder="搜索插件...">
+            <div class="mt-4 flex flex-col md:flex-row md:justify-between space-y-4 md:space-y-0 md:space-x-4">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text" id="search-input" placeholder="搜索插件..." 
+                        class="pl-10 pr-4 py-2 w-full md:w-64 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
-                <div class="filter-options">
-                    <select id="tag-filter">
+                <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+                    <select id="tag-filter" 
+                        class="w-full sm:w-40 border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <option value="">所有标签</option>
                         <!-- 标签选项会动态填充 -->
                     </select>
-                    <select id="sort-by">
+                    <select id="sort-by" 
+                        class="w-full sm:w-40 border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <option value="name">按名称排序</option>
                         <option value="downloads">按下载量排序</option>
                         <option value="update_time">按更新时间排序</option>
@@ -346,21 +132,37 @@ fetch('https://looseprince.github.io/Plugin-Catalogue//plugins.json')
                 </div>
             </div>
             
-            <div class="table-responsive">
-                <table>
-                    <thead>
+            <div class="mt-6 overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
                         <tr>
-                            <th>名称</th>
-                            <th>版本</th>
-                            <th>描述</th>
-                            <th>作者</th>
-                            <th>标签</th>
-                            <th>下载量</th>
-                            <th>许可证</th>
-                            <th>更新时间</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <span class="flex items-center"><i class="fas fa-cube mr-1"></i>名称</span>
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <span class="flex items-center"><i class="fas fa-code-branch mr-1"></i>版本</span>
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <span class="flex items-center"><i class="fas fa-info-circle mr-1"></i>描述</span>
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <span class="flex items-center"><i class="fas fa-user mr-1"></i>作者</span>
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <span class="flex items-center"><i class="fas fa-tags mr-1"></i>标签</span>
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <span class="flex items-center"><i class="fas fa-download mr-1"></i>下载量</span>
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <span class="flex items-center"><i class="fas fa-balance-scale mr-1"></i>许可证</span>
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <span class="flex items-center"><i class="fas fa-clock mr-1"></i>更新时间</span>
+                            </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="bg-white divide-y divide-gray-200">
                         <!-- 插件数据将通过JavaScript动态填充 -->
                     </tbody>
                 </table>
@@ -368,9 +170,9 @@ fetch('https://looseprince.github.io/Plugin-Catalogue//plugins.json')
         </div>
     </div>
     
-    <footer>
-        <div class="container">
-            <p>MCDR插件目录 &copy; 2025 | 数据每2小时自动更新</p>
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>插件目录 &copy; 2025 | 数据每2小时自动更新</p>
         </div>
     </footer>
 
@@ -410,33 +212,48 @@ fetch('https://looseprince.github.io/Plugin-Catalogue//plugins.json')
                 function renderPlugins(plugins) {
                     tbody.innerHTML = ''; // 清空表格
                     
+                    if (plugins.length === 0) {
+                        const emptyRow = document.createElement('tr');
+                        const emptyCell = document.createElement('td');
+                        emptyCell.colSpan = 8;
+                        emptyCell.className = 'px-6 py-4 text-center text-gray-500';
+                        emptyCell.innerHTML = '<i class="fas fa-search-minus mr-2"></i>没有找到匹配的插件';
+                        emptyRow.appendChild(emptyCell);
+                        tbody.appendChild(emptyRow);
+                        return;
+                    }
+                    
                     plugins.forEach(plugin => {
                         const row = document.createElement('tr');
+                        row.className = 'hover:bg-gray-50';
                         
                         // 名称 (带链接)
                         const nameCell = document.createElement('td');
+                        nameCell.className = 'px-6 py-4 whitespace-nowrap';
                         const nameLink = document.createElement('a');
                         nameLink.href = plugin.repository_url;
                         nameLink.target = "_blank";
-                        nameLink.className = 'repo-link';
-                        nameLink.textContent = plugin.name || plugin.id;
+                        nameLink.className = 'text-blue-600 hover:text-blue-800 hover:underline flex items-center';
+                        nameLink.innerHTML = `<i class="fab fa-github mr-1"></i>${plugin.name || plugin.id}`;
                         nameCell.appendChild(nameLink);
                         row.appendChild(nameCell);
                         
                         // 版本
                         const versionCell = document.createElement('td');
-                        versionCell.textContent = plugin.latest_version || plugin.version || 'N/A';
+                        versionCell.className = 'px-6 py-4 whitespace-nowrap';
+                        versionCell.innerHTML = `<span class="px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded-full">${plugin.latest_version || plugin.version || 'N/A'}</span>`;
                         row.appendChild(versionCell);
                         
                         // 描述
                         const descCell = document.createElement('td');
-                        descCell.className = 'description';
+                        descCell.className = 'px-6 py-4 max-w-xs';
                         const desc = plugin.description?.zh_cn || plugin.description?.en_us || '无描述';
                         descCell.textContent = desc;
                         row.appendChild(descCell);
                         
                         // 作者
                         const authorCell = document.createElement('td');
+                        authorCell.className = 'px-6 py-4 whitespace-nowrap';
                         if (plugin.authors && plugin.authors.length > 0) {
                             plugin.authors.forEach((author, index) => {
                                 if (index > 0) authorCell.appendChild(document.createTextNode(', '));
@@ -444,7 +261,7 @@ fetch('https://looseprince.github.io/Plugin-Catalogue//plugins.json')
                                     const authorLink = document.createElement('a');
                                     authorLink.href = author.link;
                                     authorLink.target = "_blank";
-                                    authorLink.className = 'repo-link';
+                                    authorLink.className = 'text-blue-600 hover:text-blue-800 hover:underline';
                                     authorLink.textContent = author.name;
                                     authorCell.appendChild(authorLink);
                                 } else {
@@ -458,13 +275,17 @@ fetch('https://looseprince.github.io/Plugin-Catalogue//plugins.json')
                         
                         // 标签
                         const tagsCell = document.createElement('td');
+                        tagsCell.className = 'px-6 py-4';
                         if (plugin.labels && plugin.labels.length > 0) {
+                            const tagsDiv = document.createElement('div');
+                            tagsDiv.className = 'flex flex-wrap gap-1';
                             plugin.labels.forEach(tag => {
                                 const tagSpan = document.createElement('span');
-                                tagSpan.className = 'tag';
+                                tagSpan.className = 'px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded-full';
                                 tagSpan.textContent = tag;
-                                tagsCell.appendChild(tagSpan);
+                                tagsDiv.appendChild(tagSpan);
                             });
+                            tagsCell.appendChild(tagsDiv);
                         } else {
                             tagsCell.textContent = '-';
                         }
@@ -472,18 +293,20 @@ fetch('https://looseprince.github.io/Plugin-Catalogue//plugins.json')
                         
                         // 下载量
                         const downloadsCell = document.createElement('td');
-                        downloadsCell.textContent = plugin.downloads || '0';
+                        downloadsCell.className = 'px-6 py-4 whitespace-nowrap';
+                        downloadsCell.innerHTML = `<span class="flex items-center"><i class="fas fa-download mr-1 text-green-500"></i>${plugin.downloads || '0'}</span>`;
                         row.appendChild(downloadsCell);
                         
                         // 许可证
                         const licenseCell = document.createElement('td');
+                        licenseCell.className = 'px-6 py-4 whitespace-nowrap';
                         if (plugin.license) {
                             if (plugin.license_url) {
                                 const licenseLink = document.createElement('a');
                                 licenseLink.href = plugin.license_url;
                                 licenseLink.target = "_blank";
-                                licenseLink.className = 'repo-link';
-                                licenseLink.textContent = plugin.license;
+                                licenseLink.className = 'text-blue-600 hover:text-blue-800 hover:underline flex items-center';
+                                licenseLink.innerHTML = `<i class="fas fa-balance-scale mr-1"></i>${plugin.license}`;
                                 licenseCell.appendChild(licenseLink);
                             } else {
                                 licenseCell.textContent = plugin.license;
@@ -495,6 +318,7 @@ fetch('https://looseprince.github.io/Plugin-Catalogue//plugins.json')
                         
                         // 更新时间
                         const updateCell = document.createElement('td');
+                        updateCell.className = 'px-6 py-4 whitespace-nowrap text-sm text-gray-500';
                         updateCell.textContent = plugin.last_update_time || '未知';
                         row.appendChild(updateCell);
                         
@@ -545,6 +369,14 @@ fetch('https://looseprince.github.io/Plugin-Catalogue//plugins.json')
             })
             .catch(error => {
                 console.error('加载插件数据失败:', error);
+                const tbody = document.querySelector('tbody');
+                const row = document.createElement('tr');
+                const cell = document.createElement('td');
+                cell.colSpan = 8;
+                cell.className = 'px-6 py-4 text-center text-red-500';
+                cell.innerHTML = `<i class="fas fa-exclamation-triangle mr-2"></i>加载插件数据失败: ${error.message}`;
+                row.appendChild(cell);
+                tbody.appendChild(row);
             });
     </script>
 </body>
