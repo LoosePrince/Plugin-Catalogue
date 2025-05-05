@@ -5,8 +5,8 @@ on:
   push:                     # 当plugins目录有更新时触发
     paths:
       - 'plugins/**'
-  schedule:                 # 定时触发（每两小时一次）
-    - cron: '0 */2 * * *'   # 每两小时的整点执行
+  # schedule:                 # 定时触发（每两小时一次）
+    # - cron: '0 */2 * * *'   # 每两小时的整点执行
 
 jobs:
   update:
