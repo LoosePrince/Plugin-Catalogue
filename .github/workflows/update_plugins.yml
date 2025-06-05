@@ -45,7 +45,7 @@ jobs:
 
     - name: 临时保存 data 文件夹
       run: |
-        mv data /tmp/data
+        mv data /tmp/data || true
 
     - name: 清空所有内容（保留 .git）
       run: |
@@ -53,11 +53,16 @@ jobs:
 
     - name: 恢复 data 文件夹
       run: |
-        mv /tmp/data ./data
+        mv /tmp/data ./data || true
 
-    - name: 创建无历史的 meta 分支并提交
+    - name: 切换到无历史 meta 分支并设置身份
       run: |
         git checkout --orphan meta
+        git config user.name "Automated Updater"
+        git config user.email "actions@users.noreply.github.com"
+
+    - name: 提交并强制推送到 meta 分支（覆盖历史）
+      run: |
         git add -A
         git commit -m "Auto-update: $(date +'%Y-%m-%d %H:%M')" --allow-empty
         git push --force origin meta
