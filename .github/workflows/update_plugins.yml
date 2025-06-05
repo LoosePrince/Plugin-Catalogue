@@ -43,20 +43,19 @@ jobs:
           exit 1
         }
 
-    - name: Checkout meta branch
-      uses: actions/checkout@v4
-      with:
-        ref: meta
-        fetch-depth: 0
-
-    - name: 提交并强制推送到 meta 分支（覆盖历史）
+    - name: 清空所有内容（保留 .git）
       run: |
-        git config --global user.name "Automated Updater"
-        git config --global user.email "actions@users.noreply.github.com"
-        git config --global advice.addIgnoredFile false
-        git add data/
-        git commit -m "Auto-update: $(date +'%Y-%m-%d %H:%M')" || echo "No changes to commit."
-        git branch -M meta
+        find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+
+    - name: 复制 data 文件夹到根目录
+      run: |
+        cp -r data ./data
+
+    - name: 创建无历史的 meta 分支并提交
+      run: |
+        git checkout --orphan meta
+        git add -A
+        git commit -m "Auto-update: $(date +'%Y-%m-%d %H:%M')" --allow-empty
         git push --force origin meta
 
     - name: Cleanup
