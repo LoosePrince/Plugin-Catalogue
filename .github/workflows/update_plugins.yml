@@ -5,8 +5,8 @@ on:
   push:                     # 当plugins目录有更新时触发
     paths:
       - 'plugins/**'
-  # schedule:                 # 定时触发（每两小时一次）
-    # - cron: '0 */2 * * *'   # 每两小时的整点执行
+  schedule:                 # 定时触发（每小时45分）
+    - cron: '45 * * * *'   # 每小时的45分执行
 
 jobs:
   update:
@@ -43,24 +43,21 @@ jobs:
           exit 1
         }
 
-    - name: Commit changes
-      if: success() && github.ref == 'refs/heads/main'
+    - name: Checkout meta branch
+      uses: actions/checkout@v4
+      with:
+        ref: meta
+        fetch-depth: 0
+
+    - name: 提交并强制推送到 meta 分支（覆盖历史）
       run: |
         git config --global user.name "Automated Updater"
         git config --global user.email "actions@users.noreply.github.com"
         git config --global advice.addIgnoredFile false
         git add data/
-        if ! git diff --quiet || ! git diff --staged --quiet; then
-          git commit -m "Auto-update: $(date +'%Y-%m-%d %H:%M')" && git push
-        else
-          echo "No changes to commit."
-        fi
-
-    - name: Upload data folder for deployment
-      uses: actions/upload-artifact@v4
-      with:
-        name: data-folder
-        path: data/
+        git commit -m "Auto-update: $(date +'%Y-%m-%d %H:%M')" || echo "No changes to commit."
+        git branch -M meta
+        git push --force origin meta
 
     - name: Cleanup
       if: always()
