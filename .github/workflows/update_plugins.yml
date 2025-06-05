@@ -45,7 +45,8 @@ jobs:
 
     - name: 临时保存 data 文件夹
       run: |
-        mv data /tmp/data || true
+        mkdir -p /tmp/data_bak
+        cp -r data/* /tmp/data_bak/ || true
 
     - name: 清空所有内容（保留 .git）
       run: |
@@ -53,7 +54,8 @@ jobs:
 
     - name: 恢复 data 文件夹
       run: |
-        mv /tmp/data ./data || true
+        mkdir -p data
+        cp -r /tmp/data_bak/* data/ || true
 
     - name: 切换到无历史 meta 分支并设置身份
       run: |
