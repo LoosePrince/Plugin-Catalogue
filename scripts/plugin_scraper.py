@@ -71,9 +71,13 @@ def create_session(retry_count, timeout):
     return session
 
 def get_beijing_time():
-    """获取当前北京时间"""
+    """获取当前北京时间，返回格式化的时间和时间戳"""
     tz = pytz.timezone("Asia/Shanghai")
-    return datetime.now(tz).strftime("%Y-%m-%d %H:%M:%S")
+    now = datetime.now(tz)
+    return {
+        'formatted': now.strftime("%Y-%m-%d %H:%M:%S"),
+        'timestamp': int(now.timestamp())
+    }
 
 def parse_github_url(url):
     """解析GitHub URL，获取用户名和仓库名"""
@@ -408,6 +412,9 @@ def process_plugin(plugin_folder, session):
             print(f"获取仓库信息失败: {e}")
             repo_info = {}
         
+        # 获取当前时间
+        current_time = get_beijing_time()
+        
         # 获取下载次数 - 可能会失败，使用默认值或现有值
         try:
             downloads = get_downloads_count(session, owner, repo)
@@ -448,13 +455,15 @@ def process_plugin(plugin_folder, session):
             'dependencies': plugin_info.get('dependencies', existing_data.get('dependencies', {})),
             'labels': local_info.get('labels', existing_data.get('labels', [])),
             'repository_url': repository_url,
-            'update_time': get_beijing_time(),
+            'update_time': current_time['formatted'],
+            'update_time_timestamp': current_time['timestamp'],
             'latest_version': latest_version,
             'license': repo_info.get('license', existing_data.get('license')),
             'license_url': repo_info.get('license_url', existing_data.get('license_url')),
             'downloads': downloads if downloads > 0 else existing_data.get('downloads', 0),
             'readme_url': readme_url,
-            'last_update_time': repo_info.get('last_update_time', existing_data.get('last_update_time'))
+            'last_update_time': repo_info.get('last_update_time', existing_data.get('last_update_time')),
+            'last_update_time_timestamp': int(datetime.fromisoformat(repo_info.get('last_update_time', '1970-01-01T00:00:00Z').replace('Z', '+00:00')).timestamp()) if repo_info.get('last_update_time') else existing_data.get('last_update_time_timestamp', 0)
         }
         
         # 处理作者信息
@@ -492,6 +501,7 @@ def process_plugin(plugin_folder, session):
             plugin_id = os.path.basename(plugin_folder)
             
             # 构建最小数据
+            current_time = get_beijing_time()
             return {
                 'id': plugin_id,
                 'name': local_info.get('name', plugin_id),
@@ -500,9 +510,12 @@ def process_plugin(plugin_folder, session):
                 'dependencies': {},
                 'labels': local_info.get('labels', []),
                 'repository_url': local_info.get('repository', ''),
-                'update_time': get_beijing_time(),
+                'update_time': current_time['formatted'],
+                'update_time_timestamp': current_time['timestamp'],
                 'latest_version': '0.0.0',
                 'downloads': 0,
+                'last_update_time': None,
+                'last_update_time_timestamp': 0,
                 'authors': local_info.get('authors', [])
             }
         except:
