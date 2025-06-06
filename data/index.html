@@ -65,13 +65,15 @@
   "dependencies": {}, // 插件依赖
   "labels": [], // 插件标签
   "repository_url": "GitHub仓库URL",
-  "update_time": "数据更新时间",
+  "update_time": "数据更新时间（格式：YYYY-MM-DD HH:mm:ss）",
+  "update_time_timestamp": 1706163361, // 数据更新时间戳（Unix时间戳，单位：秒）
   "latest_version": "最新版本",
   "license": "许可证类型",
   "license_url": "许可证URL",
   "downloads": 下载次数,
   "readme_url": "README文件URL",
-  "last_update_time": "最后更新时间",
+  "last_update_time": "最后更新时间（格式：YYYY-MM-DD HH:mm:ss）",
+  "last_update_time_timestamp": 1706163361, // 最后更新时间戳（Unix时间戳，单位：秒）
   "authors": [
     {
       "name": "作者名称",
@@ -189,7 +191,16 @@ fetch('https://looseprince.github.io/Plugin-Catalogue/plugins.json')
                 
                 // 更新时间显示
                 if (data.length > 0) {
-                    updateTime.textContent = data[0].update_time;
+                    const updateTime = new Date(data[0].update_time_timestamp * 1000);
+                    document.getElementById('update-time').textContent = updateTime.toLocaleString('zh-CN', {
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit',
+                        hour12: false
+                    });
                 }
                 
                 // 收集所有标签
@@ -319,7 +330,20 @@ fetch('https://looseprince.github.io/Plugin-Catalogue/plugins.json')
                         // 更新时间
                         const updateCell = document.createElement('td');
                         updateCell.className = 'px-6 py-4 whitespace-nowrap text-sm text-gray-500';
-                        updateCell.textContent = plugin.last_update_time || '未知';
+                        if (plugin.last_update_time_timestamp) {
+                            const lastUpdate = new Date(plugin.last_update_time_timestamp * 1000);
+                            updateCell.textContent = lastUpdate.toLocaleString('zh-CN', {
+                                year: 'numeric',
+                                month: '2-digit',
+                                day: '2-digit',
+                                hour: '2-digit',
+                                minute: '2-digit',
+                                second: '2-digit',
+                                hour12: false
+                            });
+                        } else {
+                            updateCell.textContent = '未知';
+                        }
                         row.appendChild(updateCell);
                         
                         tbody.appendChild(row);
@@ -347,7 +371,7 @@ fetch('https://looseprince.github.io/Plugin-Catalogue/plugins.json')
                         if (sortOption === 'downloads') {
                             return (b.downloads || 0) - (a.downloads || 0);
                         } else if (sortOption === 'update_time') {
-                            return new Date(b.last_update_time || 0) - new Date(a.last_update_time || 0);
+                            return (b.last_update_time_timestamp || 0) - (a.last_update_time_timestamp || 0);
                         } else {
                             // 默认按名称排序
                             const nameA = (a.name || a.id).toLowerCase();
