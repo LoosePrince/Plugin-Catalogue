@@ -73,14 +73,22 @@ jobs:
         git checkout --orphan meta
         git rm -rf . 2>/dev/null || echo "清空工作目录"
         
-    - name: 添加完整的 data 文件夹内容并提交
+    - name: 添加完整的 data 文件夹内容和 README.md 并提交
       run: |
         # 创建 data 文件夹并复制所有内容
         mkdir -p data
         cp -r temp_data/* data/ 2>/dev/null || echo "temp_data 为空"
         
-        # 添加所有 data 文件夹内容
-        git add data
+        # 复制 data/README.md 到根目录作为分支描述
+        if [ -f "data/README.md" ]; then
+          cp data/README.md README.md
+          echo "已将 data/README.md 复制到根目录"
+        else
+          echo "警告: 未找到 data/README.md 文件"
+        fi
+        
+        # 添加所有内容
+        git add data README.md
         
         # 检查是否有变更
         if git diff --staged --quiet; then

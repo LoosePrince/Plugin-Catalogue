@@ -16,15 +16,25 @@ MCDR 插件仓库（非官）
 ## 目录结构
 
 ```
-Plugin-Catalogue/
+Plugin-Catalogue/main
 ├── data/                # 存放生成的数据文件
-│   └── plugins.json     # 插件信息汇总
+│   ├── index.html       # 插件信息汇总页面
+│   └── README.md        # 分支描述
 ├── plugins/             # 存放各插件信息目录
 │   └── [plugin_id]/     # 每个插件的信息目录
 │       └── plugin_info.json  # 基本信息配置
 ├── scripts/             # 脚本文件
 │   └── plugin_scraper.py  # 插件信息抓取脚本
-└── .config              # 配置文件（包含 GitHub PAT）仅在本地使用，请勿提交自己的密钥到公开领域
+├── .config              # 配置文件（包含 GitHub PAT）仅在本地使用，请勿提交自己的密钥到公开领域
+└── README.md            # 主分支描述
+```
+
+```
+Plugin-Catalogue/meta
+├── data/                # 存放生成的数据文件
+│   ├── index.html       # 插件信息汇总页面（从main分支data/index.html复制）
+│   └── plugins.json     # 插件信息汇总
+└── README.md            # 分支描述（从main分支data/README.md复制）
 ```
 
 ## 如何使用本仓库
