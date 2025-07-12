@@ -1,0 +1,97 @@
+[
+  {
+    "id": "guguwebui",
+    "name": "GUGU WebUI",
+    "version": "1.4.2",
+    "description": {
+      "en_us": "WebUI for managing all plugins, MCDR configurations, online installation, terminals, and more.",
+      "zh_cn": "通过webui来管理所有插件、MCDR配置、在线安装、终端等多种功能"
+    },
+    "dependencies": {},
+    "labels": [
+      "information",
+      "management"
+    ],
+    "repository_url": "https://github.com/LoosePrince/PF-MCDR-WebUI",
+    "update_time": "2025-07-13 04:49:54",
+    "update_time_timestamp": 1752353394,
+    "latest_version": "1.4.2",
+    "license": "GPL-3.0",
+    "license_url": "https://api.github.com/licenses/gpl-3.0",
+    "downloads": 673,
+    "readme_url": "https://raw.githubusercontent.com/LoosePrince/PF-MCDR-WebUI/main/README.md",
+    "last_update_time": "2025-07-11T11:06:33Z",
+    "last_update_time_timestamp": 1752231993,
+    "authors": [
+      {
+        "name": "XueK66",
+        "link": "https://github.com/XueK66"
+      },
+      {
+        "name": "LoosePrince",
+        "link": "https://github.com/LoosePrince"
+      }
+    ]
+  },
+  {
+    "id": "cq_qq_api",
+    "name": "cq_qq_api",
+    "version": "1.3.0",
+    "description": {
+      "en_us": "Websocket application to process information from QQ",
+      "zh_cn": "处理QQ通信的websocket应用"
+    },
+    "dependencies": {},
+    "labels": [
+      "api"
+    ],
+    "repository_url": "https://github.com/XueK66/PF-cq_qq_api",
+    "update_time": "2025-07-13 04:49:55",
+    "update_time_timestamp": 1752353395,
+    "latest_version": "1.3.0",
+    "license": "GPL-3.0",
+    "license_url": "https://api.github.com/licenses/gpl-3.0",
+    "downloads": 728,
+    "readme_url": "https://raw.githubusercontent.com/XueK66/PF-cq_qq_api/master/README.md",
+    "last_update_time": "2025-06-14T23:39:07Z",
+    "last_update_time_timestamp": 1749944347,
+    "authors": [
+      {
+        "name": "XueK66",
+        "link": "https://github.com/XueK66"
+      },
+      {
+        "name": "LoosePrince",
+        "link": "https://github.com/LoosePrince"
+      }
+    ]
+  },
+  {
+    "id": "test1",
+    "name": "测试插件",
+    "version": "1.1.0",
+    "description": {
+      "zh_cn": "测试插件，安装后没有实际功能，仅用做测试"
+    },
+    "dependencies": {},
+    "labels": [
+      "test"
+    ],
+    "repository_url": "https://github.com/LoosePrince/test1",
+    "update_time": "2025-07-13 04:49:55",
+    "update_time_timestamp": 1752353395,
+    "latest_version": "1.1.0",
+    "license": null,
+    "license_url": null,
+    "downloads": 6,
+    "readme_url": "https://raw.githubusercontent.com/LoosePrince/test1/main/README.md",
+    "last_update_time": "2025-04-23T06:38:16Z",
+    "last_update_time_timestamp": 1745390296,
+    "authors": [
+      {
+        "name": "LoosePrince",
+        "link": "https://github.com/LoosePrince"
+      }
+    ]
+  }
+]
